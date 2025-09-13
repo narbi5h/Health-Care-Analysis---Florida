@@ -4,8 +4,7 @@
 # Google Colab + Google Drive
 # ================================
 
-from google.colab import drive
-drive.mount('/content/drive')
+
 
 import re
 import os
@@ -15,8 +14,9 @@ import pandas as pd
 from pathlib import Path
 
 # -------- CONFIGURE THIS --------
-BASE_DIR = Path("/content/drive/MyDrive/BANA 650 Project") # <-- put your folder here
-DRY_RUN = True   # True = preview only, False = actually move/rename
+# BASE_DIR = Path("D:/BANA 650/HOSPITAL FILES/") # <-- put your folder here
+BASE_DIR = Path("//narbfileserver/BANA650GROUP/HOSPITAL FILES")
+DRY_RUN = False   # True = preview only, False = actually move/rename
 # --------------------------------
 
 # Create output folders
@@ -248,3 +248,6 @@ for k in ["LONG","WIDE","JSON","NONE"]:
 
 print("\nSample of planned/resulting names:")
 print(df.head(12))
+
+
+#TEST
