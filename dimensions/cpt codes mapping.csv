@@ -1,0 +1,32 @@
+﻿cpt_code,Description,Specialty
+20610,"Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); without ultrasound guidance",Orthopedic
+20611,"Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); with ultrasound guidance, with permanent recording and reporting",Orthopedic
+27447,"Arthroplasty, knee, condyle and plateau; medial AND lateral compartments with or without patella resurfacing (total knee arthroplasty)",Orthopedic
+27130,"Arthroplasty, acetabular and proximal femoral prosthetic replacement (total hip arthroplasty), with or without autograft or allograft",Orthopedic
+20600,"Arthrocentesis, aspiration and/or injection, small joint or bursa (eg, fingers, toes); without ultrasound guidance",Orthopedic
+20605,"Arthrocentesis, aspiration and/or injection, intermediate joint or bursa (eg, temporomandibular, acromioclavicular, wrist, elbow or ankle, olecranon bursa); without ultrasound guidance",Orthopedic
+29827,"Arthroscopy, shoulder, surgical; with rotator cuff repair",Orthopedic
+29881,"Arthroscopy, knee, surgical; with meniscectomy (medial OR lateral, including any meniscal shaving) including debridement/shaving of articular cartilage (chondroplasty), same or separate compartment(s), when performed",Orthopedic
+26055,"Tendon sheath incision (eg, for trigger finger)",Orthopedic
+29826,"Arthroscopy, shoulder, surgical; decompression of subacromial space with partial acromioplasty, with coracoacromial ligament (ie, arch) release, when performed (List separately in addition to code for primary procedure)",Orthopedic
+97110,"Therapeutic exercises to develop strength, endurance, range of motion, and flexibility. (15 min.)",Physical Medicine & Rehabilitation
+97140,"Manual therapy techniques (e.g., mobilization, manipulation, manual traction) to one or more regions. (15 min.)",Physical Medicine & Rehabilitation
+97112,"Neuromuscular re-education of movement, balance, coordination, kinesthetic sense, posture, and/or proprioception. (15 min.)",Physical Medicine & Rehabilitation
+97530,Therapeutic activities utilizing dynamic activities to improve functional performance. (15 min.),Physical Medicine & Rehabilitation
+97116,Gait training (including stair climbing) to improve walking ability. (15 min.),Physical Medicine & Rehabilitation
+97161,"Physical therapy evaluation, low complexity. (Used for initial assessment)",Physical Medicine & Rehabilitation
+97162,"Physical therapy evaluation, moderate complexity. (Used for initial assessment)",Physical Medicine & Rehabilitation
+97035,Ultrasound therapy (constant attendance modality). (15 min.),Physical Medicine & Rehabilitation
+97535,"Self-care/home management training (e.g., ADLs, safety procedures, assistive technology). (15 min.)",Physical Medicine & Rehabilitation
+97164,Physical therapy re-evaluation of established plan of care.,Physical Medicine & Rehabilitation
+90791,Psychiatric diagnostic evaluation (without medical services). This is for the initial intake session without medication prescribing/management. (Up to 90 minutes typical).,Psychiatry/Psychology
+90792,"Psychiatric diagnostic evaluation with medical services. Used for an initial intake that includes medical services (e.g., medication assessment). (1-2 hours typical).",Psychiatry/Psychology
+90832,"Individual Psychotherapy, 30 minutes. Must be face-to-face time of 16 - 37 minutes. Used for a standalone therapy session.",Psychiatry/Psychology
+90834,"Individual Psychotherapy, 45 minutes. Must be face-to-face time of 38 - 52 minutes. This is the most commonly used individual therapy code.",Psychiatry/Psychology
+90837,"Individual Psychotherapy, 60 minutes. Must be face-to-face time of 53 minutes or more. Used for a longer, standalone therapy session.",Psychiatry/Psychology
+90833,"Individual Psychotherapy, 30 min, performed with E/M service. Must be face-to-face time of 16 - 37 minutes. Add-on code used in conjunction with an E/M (medication management) code.",Psychiatry/Psychology
+90836,"Individual Psychotherapy, 45 min, performed with E/M service. Must be face-to-face time of 38 - 52 minutes. Add-on code used in conjunction with an E/M (medication management) code.",Psychiatry/Psychology
+90838,"Individual Psychotherapy, 60 min, performed with E/M service. Must be face-to-face time of 53 minutes or more. Add-on code used in conjunction with an E/M (medication management) code.",Psychiatry/Psychology
+90839,Psychotherapy for crisis; first 60 minutes. Used for urgent/immediate assessment and stabilization of a patient in acute crisis. Billed for 30 - 74 minutes. Cannot be billed with other psychotherapy codes on the same day.,Psychiatry/Psychology
+90847,"Family psychotherapy (conjoint psychotherapy) with patient present. Used when the identified patient is present in the family session. (50 minutes typical, minimum 26 minutes).",Psychiatry/Psychology
+90853,Group Psychotherapy (other than multiple-family group). (45-60 minutes typical).,Psychiatry/Psychology
