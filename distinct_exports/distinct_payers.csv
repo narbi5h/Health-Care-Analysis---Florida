@@ -1,0 +1,945 @@
+﻿payer_name,bucket
+1016_TRULI HEALTH HMO,Commercial
+1023_BLUE CROSS BLUE SHIELD,Commercial
+1024_CIGNA,Commercial
+1025_AETNA,Commercial
+1028_UNITED MEDICAL RESOURCES,Commercial
+1085_AETNA,Commercial
+1195_HUMANA,Commercial
+1195_MOLINA,Commercial
+1195_SIMPLY HEALTHCARE,Commercial
+1195_SUNSHINE,Commercial
+1195_UNITEDHEALTHCARE HMO,Commercial
+121_BLUE CROSS BLUE SHIELD,Commercial
+141,Unknown
+149_ARCHBOLD MEDICAL CENTER,Commercial
+182_AVALON PLUS,Commercial
+182_COVENTRY HEALTH CARE,Commercial
+182_PHCS NETWORK,Commercial
+182_TRILOGY,Commercial
+241,Unknown
+288,Unknown
+29_AETNA,Commercial
+31_CENTRAL STATES,Other Government
+371,Unknown
+44_CIGNA,Commercial
+45,Unknown
+45_UNITED HEALTHCARE,Commercial
+605_SECURITY HEALTH,Commercial
+64_MIDLANDS CHOICE,Commercial
+64_PCHS/HEALTHEOS,Commercial
+690_GALAXY HEALTH TRANSPLANT,Commercial
+694_KAISER PERMANENTE TRANSPLANT,Commercial
+696_OPTUMHEALTH TRANSPLANT,Commercial
+697_6 DEGREES HEALTH TRANSPLANT,Commercial
+699_CENTRAL STATES TRANSPLANT,Commercial
+699_TRILOGY TRANSPLANT,Commercial
+700_HUMANA TRANSPLANT,Commercial
+71_ALLIED BENEFIT SYSTEMS,Commercial
+758_MEDICA,Commercial
+764_PREFERRED ONE,Commercial
+766_UNITED MEDICAL RESOURCES,Commercial
+77_COVENTRY NATIONAL NETWORK,Commercial
+804_HEALTH DESIGN PLUS,Commercial
+814_UNITED MEDICAL RESOURCES,Commercial
+818_HEALTH PLANS INCORPORATED TRANSPLANT,Commercial
+818_JP FARLEY CORP TRANSPLANT,Commercial
+839_CIGNA,Commercial
+852_HEALTH HUB USA,Commercial
+857_ALLIANCE COAL HEALTH PLAN,Commercial
+864_CLALIT,Commercial
+882_WALMART CANCER PROGRAM,Commercial
+882_WALMART SPINE NETWORK,Commercial
+90 DEGREE BENEFITS,Commercial
+904_BMI,Commercial
+909_UNITED MEDICAL RESOURCES,Commercial
+938_ALLIANZ,Commercial
+961_INTERLINK HEALTH CARE,Commercial
+9_MIDLANDS CHOICE NETWORK INDIVIDUAL AND FAMILY BUSINESS,Commercial
+AARP,Commercial
+AARP MCR HMO,Commercial
+ACCESS BEAHVIORAL HEALTH HUMANA MCD,Commercial
+ADMINISTRATIVE CONCEPTS [100292],Unknown
+AETNA,Commercial
+AETNA BEHAVIORAL HEALTH [100331],Commercial
+AETNA BETTER HEALTH [210102],Commercial
+AETNA BETTER HEALTH [250313],Commercial
+AETNA COVENTRY MCR REPLACEMENT [250518],Medicare
+AETNA MCR REPLACEMENT,Medicare
+AETNA MEDICAID [450116],Medicaid
+AETNA MEDICARE ADVANTAGE,Medicare
+AETNA MEDICARE SUPPLEMENT [100276],Medicare
+AETNA MEDICARE [450126],Medicare
+AETNA NEW BUSINESS,Commercial
+AETNA NEW BUSINESS DISCOUNT,Commercial
+AETNA QUALIFIED HEALTH PLANS,Commercial
+AETNA WHOLE HEALTH,Commercial
+AETNA [100001],Commercial
+AETNA [210101],Commercial
+AFFORDABLE,Unknown
+AITHER HEALTH [100342],Commercial
+ALIGN SENIOR CARE [250524],Commercial
+ALLIED BENEFIT GROUP [100312],Commercial
+ALLSTATE AUTO [750005],Commercial
+AM FIRST INSURANCE COMPANY [100355],Commercial
+AMA INSURANCE [100329],Commercial
+AMBETTER COMMERCIAL,Commercial
+AMBETTER COMMERCIAL-EXCHANGE,Commercial
+AMBETTER OF SUNSHINE HEALTH [100256],Commercial
+AMERIBEN SOLUTIONS [100319],Commercial
+AMERICAN PLAN ADMINISTRATORS [100343],Commercial
+AMERICAN PUBLIC LIFE [100344],Commercial
+AMERIGROUP COMMUNITY CARE [450119],Commercial
+AMERIHEALTH,Commercial
+AMFIRST INSURANCE COMPANY [100369],Commercial
+AMO MEDICAL [100364],Commercial
+AMTRUST [700078],Commercial
+APWU [100377],Commercial
+ASCENSION SMARTHEALTH [100259],Commercial
+ASR HEALTH BENEFITS [100345],Commercial
+ASSURANT HEALTH - AETNA ASA [100270],Commercial
+AVMED,Commercial
+AVMED BEHAVIORAL HEALTH [100287],Commercial
+AVMED FLORIDA,Commercial
+AVMED HEALTH PLAN [250204],Commercial
+AVMED [100247],Commercial
+Aetna,Commercial
+Aetna Best Choice,Commercial
+Aetna Better Health,Commercial
+Aetna First Health,Commercial
+Aetna Health,Commercial
+Aetna Health/Aetna Summit,Commercial
+Aetna Healthcare of Florida/Vista Health Plan/Aetna Better Health,Commercial
+Aetna Oncology,Commercial
+Aetna of FL,Commercial
+Align,Commercial
+Alignment Health,Commercial
+AmBetter,Commercial
+AmBetter Oncology,Commercial
+Ambetter,Commercial
+AmeriHealth Caritas FL,Commercial
+America's Choice,Commercial
+America's Choice Provider Network,Commercial
+American,Commercial
+Amerigroup,Commercial
+Amerihealth Caritas,Commercial
+Amerihealth Caritas Oncology,Commercial
+AvMed,Commercial
+Avmed,Commercial
+BAPTIST BEHAVIORAL HEALTH ENDOWMENTS [500019],Commercial
+BC ADVANTAGE MCR REPLACEMENT,Commercial
+BCBS,Commercial
+BCBS BSL,Commercial
+BCBS HMO,Commercial
+BCBS MBN,Commercial
+BCBS MEDICARE SUPPLEMENT [100277],Medicare
+BCBS MEDICARE [250503],Medicare
+BCBS MEDICARE [450127],Medicare
+BCBS NWB,Commercial
+BCBS PHS,Commercial
+BCBS PPO,Commercial
+BCBS SBN,Commercial
+BCBS [200002],Commercial
+BCBS [210001],Commercial
+BCCEDP [500011],Commercial
+BEACON HEALTH OPTIONS [100278],Commercial
+BENEFIT ADMINISTRATIVE SYSTEMS [100294],Commercial
+BLUE,Commercial
+BLUE CROSS,Commercial
+BLUE CROSS ALIGNMENT,Commercial
+BLUE CROSS BLUE SHIELD,Commercial
+BLUE CROSS BSL,Commercial
+BLUE CROSS HMO,Commercial
+BLUE CROSS MBN,Commercial
+BLUE CROSS NWB,Commercial
+BLUE CROSS PHS,Commercial
+BLUE CROSS PPO,Commercial
+BLUE CROSS SBN,Commercial
+BLUE MCR REPLACEMENT,Commercial
+BMC EMPLOYEE HEALTH [700057],Commercial
+BMFL NEIGHBORHOOD HEALTH PARTNERSHIP 20201115,Commercial
+BRIGHT HEALTH,Commercial
+BRIGHT HEALTH EX,Commercial
+BRIGHT HEALTH [100283],Commercial
+BRIGHTON HEALTH PLAN [100325],Commercial
+BRISTOL WEST AUTO [750011],Commercial
+BayCare,Commercial
+Baycare,Commercial
+Beacon,Commercial
+Beech Street,Commercial
+Beech Street Supplemental Network,Commercial
+Beechstreet,Commercial
+Behavioral Services Network,Commercial
+Blue,Commercial
+Blue Cross,Commercial
+Blue Cross Blue Select,Commercial
+Blue Cross Blue Shield,Commercial
+Blue Cross Blue Shield of Florida,Commercial
+Blue Cross Blue Shield of Florida (Florida Blue),Commercial
+Blue Cross Health Options/Blue Care,Commercial
+Blue Cross Medicare Select Advantage,Commercial
+Blue Cross MyBlue,Commercial
+Blue Cross Network Blue/Blue Options,Commercial
+Blue Cross Oncology,Commercial
+Blue Cross Preferred Patient Care/Blue Choice,Commercial
+Blue Cross Simply Blue,Commercial
+Blue Cross Traditional,Commercial
+Blue Medicare,Commercial
+BlueCross,Commercial
+Broward Health,Commercial
+CAPITAL,Commercial
+CAPITAL HEALTH PLAN,Commercial
+CAPITAL HEALTH PLAN [100255],Commercial
+CARELON BEHAVIORAL HEALTH MEDICAID [450115],Medicaid
+CARELON BEHAVIORAL HEALTH [100379],Commercial
+CAREPLUS HEALTH MEDICARE [450130],Medicare
+CAREPLUS MCR REPLACEMENT,Commercial
+CARESOURCE OF GEORGIA MEDICAID [450121],Medicaid
+CCMSI [700077],Commercial
+CELTIC INSURANCE COMPANY [100356],Commercial
+CENPATICO SUNSHINE HEALTH MCD,Medicaid
+CENTIVO [100272],Commercial
+CENTRAL STATES INDEMNITY [100374],Commercial
+CHAMPVA [500001],Commercial
+CHILDREN MEDICAL SERVICES MCD,Commercial
+CHS,Commercial
+CIGNA,Commercial
+CIGNA BEHAVIORAL HEALTH [100288],Commercial
+CIGNA HEALTHCARE FL,Commercial
+CIGNA HEALTHSPRING,Commercial
+CIGNA HMO,Commercial
+CIGNA HMO NEW BUSINESS,Commercial
+CIGNA MCR HMO/PPO [250525],Commercial
+CIGNA PPO,Commercial
+CIGNA [100009],Commercial
+CIGNA [210201],Commercial
+CLAY COUNTY SHERIFF'S OFFICE [500025],Commercial
+CLEAR HEALTH ALLIANCE MCD,Medicaid
+CLEAR HEALTH ALLIANCE [450122],Commercial
+COLONIAL PENN LIFE [100295],Commercial
+COMMUNITY CARE PLAN [450141],Commercial
+COMMUNITY HOSPICE,Commercial
+COMMUNITY HOSPICE OF NORTHEAST FLORIDA [500012],Commercial
+COMPSYCH [100285],Commercial
+CONSTITUTION LIFE [100354],Commercial
+COUNTRY LIFE INSURANCE [100375],Commercial
+COVENTRY MCR REPLACEMENT HMO,Commercial
+COVENTRY [100010],Commercial
+CURATIVE [100388],Commercial
+CarePlus,Commercial
+CarePlus Health Plan,Commercial
+Carelon,Commercial
+Careplus,Commercial
+Careworks,Commercial
+Centurion,Commercial
+Children's Medical Services/Sunshine Health,Commercial
+Childrens,Commercial
+Cigna,Commercial
+Cigna Healthcare,Commercial
+Cigna of FL,Commercial
+Clear,Commercial
+Clear Springs Healthcare,Commercial
+ClearSpring,Commercial
+Community,Commercial
+Community Care Plan,Commercial
+Community Care Plan Oncology,Commercial
+CorVel,Commercial
+Corizon,Commercial
+Corvel,Commercial
+Coventry Network Access,Commercial
+DANIEL MEMORIAL [500028],Commercial
+DEVOTED HEALTH MEDICARE [450132],Medicare
+DIMENSION HEALTH PLAN,Commercial
+DIRECT GENERAL AUTO [750013],Commercial
+DISCOVERY AUTO [750008],Commercial
+DRUG ASSISTANCE PROGRAMS [110001],Commercial
+Devoted,Commercial
+Dimension Health,Commercial
+Dimension Health/International Plus,Commercial
+Doctor's Healthcare,Commercial
+EAP [107001],Commercial
+EBMS [100347],Commercial
+EMBLEM HEALTH [100313],Commercial
+EMPIRE NYSHIP [100291],Commercial
+EMPLOYERS HEALTH NETWORK FL,Commercial
+ENCOMPASS HEALTH REHABILITATION,Commercial
+ESIS [700079],Commercial
+ESTHI STUDY [500024],Commercial
+ESURANCE AUTO [750009],Commercial
+EVERNORTH BEHAVIORAL HEALTH,Commercial
+EVOLUTIONS HEALTHCARE,Commercial
+EVOLUTIONS HEALTHCARE SYSTEMS [100266],Commercial
+Emerging,Commercial
+Emerging Therapy Solutions,Commercial
+Employers Health Network,Commercial
+Evolutions,Commercial
+Evolutions Healthcare System,Commercial
+FACILITY BILLING - OP,Commercial
+FARM BUREAU HEALTH PLANS [100332],Commercial
+FEDERAL LIFE [100362],Commercial
+FIDELIS CARE [450142],Commercial
+FIRST HEALTH AUTO [750012],Commercial
+FIRST HEALTH NETWORK,Commercial
+FIRST HEALTH [100261],Commercial
+FL,Commercial
+FLORIDA BLUE,Commercial
+FLORIDA COMMUNITY CARE [450124],Commercial
+FLORIDA COMPLETE CARE MEDICARE [450139],Medicare
+FLORIDA HEALTH PLAN [100268],Commercial
+FREEDOM FIRST HEALTHCARE [250305],Commercial
+FREEDOM HEALTH [250505],Commercial
+FREEDOM LIFE INSURANCE [100320],Commercial
+FRINGE BENEFIT GROUP [100296],Commercial
+FSCJ STUDENT [500013],Commercial
+First,Commercial
+First Health,Commercial
+Florida,Commercial
+Florida Community Care,Commercial
+Florida Community Care Oncology,Commercial
+Florida Health Care Plan,Commercial
+Florida Pace Center,Commercial
+Fortified Provider Network,Commercial
+Freedom,Commercial
+Freedom Health,Commercial
+GCU MEDICARE SUPPLEMENT [100387],Commercial
+GEHA [100039],Commercial
+GEICO AUTO [750002],Commercial
+GERBER LIFE INSURANCE [100321],Commercial
+GLOBAL CARE [100257],Commercial
+GLOBAL EXCEL MANAGEMENT [250241],Commercial
+GLOBAL MEDICAL MANAGEMENT FL,Commercial
+GMMI/Canadian Medical Network,Commercial
+GMP EMPLOYERS RETIREE TRUST [100341],Commercial
+GOLD KIDNEY HEALTH PLAN [450143],Commercial
+GPM HEALTH AND LIFE INSURANCE [100370],Commercial
+GREAT SOUTHERN MEDICARE SUPPLEMENT [100348],Commercial
+GROUP AND PENSION ADMINISTRATORS (GPA) [100315],Commercial
+GUARANTEE TRUST LIFE [100378],Commercial
+Global Benefits Group,Commercial
+HAVEN HOSPICE,Commercial
+HAVEN HOSPICE [500014],Commercial
+HEALTH COMP [100363],Commercial
+HEALTHGRAM [100316],Commercial
+HEALTHSCOPE BENEFITS [100298],Commercial
+HEALTHSPRING MCR REPLACEMENT,Medicare
+HEARTLAND OF HC,Commercial
+"HMA,LLC [100357]",Commercial
+HOP ADMINISTRATION [100330],Commercial
+HUMANA,Commercial
+HUMANA GOLD CHOICE MCR REPLACEMENT,Commercial
+HUMANA GOLD [250508],Commercial
+HUMANA HMO,Commercial
+HUMANA HMO CARDIOLOGY MCR REPLACEMENT,Commercial
+HUMANA HMO MCR REPLACEMENT,Medicare
+HUMANA MCD,Medicaid
+HUMANA MEDICAID HMO [250318],Medicaid
+HUMANA MEDICAID [450113],Medicaid
+HUMANA MEDICARE [450128],Medicare
+HUMANA PPO,Commercial
+HUMANA PPO MCR REPLACEMENT,Medicare
+HUMANA [100052],Commercial
+HUMANA [250215],Commercial
+Health,Commercial
+Health First New York Health insurance,Commercial
+HealthSmart,Commercial
+HealthSun Health Plan,Commercial
+Humana,Commercial
+Humana Gold,Commercial
+Humana of FL,Commercial
+Humana/Choice Care,Commercial
+IAC LIFE [100366],Commercial
+IMAGINE360  [100297],Commercial
+INDEPENDENT HEALTH [100358],Commercial
+INMATE HEALTH CARE,Commercial
+INTEGRA ADMINISTRATIVE GROUP (AKA INNOVATIVE),Commercial
+INTEGRATED BEHAVIORAL HEALTH [100286],Commercial
+INTERNATIONAL,Commercial
+INTERNATIONAL TRAVELERS INSURANCE [110000],Commercial
+Ilumed,Commercial
+Innovative Healthcare,Commercial
+Integral,Commercial
+Intergrated,Commercial
+Interlink,Commercial
+JACKSONVILLE JAGUARS [500023],Commercial
+JACKSONVILLE SHERIFF'S OFFICE [500026],Commercial
+KAISER PERMANENTE [100299],Commercial
+KEMPER HEALTH [100367],Commercial
+LEE HEALTH CARE PARTNERS [250255],Commercial
+LEON MEDICAL,Commercial
+LIBERTY HEALTHSHARE [100349],Commercial
+LIBERTY MUTUAL [750014],Commercial
+LIFE TRAC TRANSPLANT,Commercial
+LIMITED BENEFIT GROUP SUPPLEMENTAL [100359],Commercial
+LINE CONSTRUCTION BENEFIT FUND [100381],Commercial
+LONGEVITY HEALTH PLAN [450140],Commercial
+LUCENT  [100384],Commercial
+LUCENT HEALTH [100300],Commercial
+LUMICO LIFE INSURANCE [100390],Commercial
+LUMINARE HEALTH [100389],Commercial
+Longevity,Commercial
+Lucet,Commercial
+MAGELLAN MEDICAID [450114],Medicaid
+MAGNACARE [100317],Commercial
+MANHATTAN LIFE INSURANCE COMPANY [100360],Commercial
+MARPAI HEALTH [100371],Commercial
+MBA TPA [100301],Commercial
+MCS CLASSICARE [450147],Commercial
+MED MUTUAL PROTECT [100380],Commercial
+MEDI-SHARE [100303],Commercial
+MEDICA HEALTH PLAN,Commercial
+MEDICA [100302],Commercial
+MEDICAID,Medicaid
+MEDICAID OF FLORIDA ALTERNATE PAYOR [300004],Medicaid
+MEDICAID OF FLORIDA [300001],Medicaid
+MEDICAID OF GEORGIA [300002],Medicaid
+MEDICAID OUT OF STATE [309999],Medicaid
+MEDICAL MUTUAL OF OHIO [100114],Commercial
+MEDICARE,Medicare
+MEDICARE ADVANTAGE,Medicare
+MEDICARE ALTERNATE PAYOR [888],Medicare
+MEDICARE MANAGED CARE,Medicare
+MEDICARE OTHER (NO SEQ),Medicare
+MEDICARE REPLACEMENT,Medicare
+MEDICARE [400001],Medicare
+MEDIPLUS [100265],Commercial
+MERITAIN [100063],Commercial
+MISCELLANEOUS AUTO/TPL [759999],Commercial
+MISCELLANEOUS COMMERCIAL [109999],Commercial
+MISCELLANEOUS CORRECTIONAL FACILITY [509998],Commercial
+MISCELLANEOUS HOSPICE [510000],Commercial
+MISCELLANEOUS MEDICAID REPLACEMENT [359999],Commercial
+MISCELLANEOUS MEDICARE REPLACEMENT [459999],Commercial
+MISCELLANEOUS OTHER [509999],Commercial
+MISCELLANEOUS SNF [510001],Commercial
+MISCELLANEOUS WORKERS' COMP [709999],Commercial
+MODA MEDICARE SUPPLEMENT [100376],Commercial
+MOLINA,Commercial
+MOLINA EXCHANGE,Commercial
+MOLINA HEALTHCARE [250307],Commercial
+MOLINA MCR REPLACEMENT,Commercial
+MOLINA MEDICAID,Medicaid
+MOLINA MEDICAID [450118],Medicaid
+MOLINA [100271],Commercial
+MULTIPLAN,Commercial
+MULTIPLAN [100258],Commercial
+MULTIPLAN/PRO AMER [250223],Commercial
+MUTUAL OF OMAHA [100304],Commercial
+Magellan,Commercial
+MedCare International,Commercial
+Medica Healthcare,Commercial
+Molina,Commercial
+Molina Complete Care,Commercial
+Molina Healthcare,Commercial
+Molina Healthcare of FL,Commercial
+Molina Oncology,Commercial
+MultiPlan/PHCS,Commercial
+Multiplan,Commercial
+NASSAU COUNTY HEALTH DEPARTMENT [500021],Commercial
+NASSAU COUNTY SHERIFF'S OFFICE [500016],Commercial
+NASSAU LIFE AND ANNUITY [100346],Commercial
+NATIONWIDE AUTO [750007],Commercial
+NDMS,Commercial
+NEIBP [100336],Commercial
+NEMOURS RESEARCH [500029],Commercial
+NEW ERA LIFE INSURANCE [100350],Commercial
+NODE,Commercial
+NON CONTRACTED,Commercial
+NON CONTRACTED MEDICARE,Medicare
+NORTHEAST FLORIDA STATE HOSPITAL [500018],Commercial
+Neighborhood Health Partnership,Commercial
+OCCUNET,Commercial
+OCCUNET STUDENT ATHLETES [500015],Commercial
+OFFICE OF THE ATTORNEY GENERAL [500022],Commercial
+OPTIMED HEALTH [100382],Commercial
+OSCAR INSURANCE COMPANY [100273],Commercial
+Occunet,Commercial
+Optimum,Commercial
+Optum,Commercial
+OptumHealth Care Solutions,Commercial
+Oscar,Commercial
+Oscar Health,Commercial
+Oscar Health Oncology,Commercial
+Oscar Health of FL,Commercial
+PACE PARTNERS [500030],Commercial
+PAN AMERICAN LIFE [100368],Commercial
+PARAMOUNT ADVANTAGE [100322],Commercial
+PEACH STATE HEALTH PLAN [450120],Commercial
+PEHP HEALTH AND BENEFITS [100391],Commercial
+PHCS,Commercial
+PHILADELPHIA AMERICAN LIFE INSURANCE [100318],Commercial
+PHYSICIANS MUTUAL [100335],Commercial
+PIP AUTO [750015],Commercial
+PNOA,Commercial
+PRESTIGE HEALTH CHOICE [450123],Commercial
+PRIME HEALTH SERVICES,Commercial
+PRINCIPAL LIFE INSURANCE [100351],Commercial
+PRIVATE HEALTHCARE SYSTEMS FL,Commercial
+PRIVATE HEALTHCARE SYSTEMS [100274],Commercial
+PROGRESSIVE AUTO [750004],Commercial
+PROMEDICA HOSPICE [500032],Commercial
+PROSPERITY LIFE GROUP [100372],Commercial
+Palm Beach ACO Reach,Commercial
+Palm Beach PACE,Commercial
+Ped-I-Care,Commercial
+Plotkin,Commercial
+Preferred Care Partners,Commercial
+Premier Health,Commercial
+Prestige,Commercial
+Prime,Commercial
+Prime Health Services,Commercial
+Provider Network of America,Commercial
+Putnam,Commercial
+QUALITY HEALTH,Commercial
+Quality Health Management,Commercial
+Quik Trip,Commercial
+REGIONAL CARE INC [100373],Commercial
+RESEARCH MEDICARE [400003],Commercial
+Rockport,Commercial
+S&S HEALTH [100361],Commercial
+SEAFARERS HEALTH AND BENEFIT ALT [10035201],Commercial
+SEAFARERS HEALTH AND BENEFIT [100352],Commercial
+SECURE,Commercial
+SELECTHEALTH [450145],Commercial
+SELMAN AND COMPANY [100323],Commercial
+SEMINOLE TRIBE OF FL,Other Government
+SILAC [100365],Commercial
+SIMPLY HEALTHCARE MEDICAID [450117],Medicaid
+SIMPLY HEALTHCARE PLAN MCD,Medicaid
+SIMPLY HEALTHCARE [100262],Commercial
+SIMPLY HEALTHCARE [250309],Commercial
+SMARTHEALTH,Commercial
+SOLIS HEALTH PLANS [450146],Commercial
+ST JOHNS COUNTY SHERIFF'S OFFICE [500027],Commercial
+STAR HEALTHCARE NETWORK FL,Commercial
+STATE FARM AUTO [750003],Commercial
+STATE FARM HEALTH INSURANCE [100383],Commercial
+SUNSHINE,Commercial
+SUNSHINE STATE,Commercial
+SUNSHINE STATE HEALTH PLAN [250311],Commercial
+SUNSHINE STATE HEALTH PLAN [450111],Commercial
+Seguro Reservas International,Commercial
+Self,Commercial
+Self Pay,Commercial
+Simply,Commercial
+Simply Freedom Optimum,Commercial
+Simply Freedom Optimum Oncology,Commercial
+Simply Healthcare,Commercial
+Simply Healthcare Oncology,Commercial
+Simply Healthcare/Clear Health Alliance,Commercial
+Simply Healthy Kids,Commercial
+Solis,Commercial
+Solis Health,Commercial
+Star Healthcare Network,Commercial
+State,Commercial
+Sunshine,Commercial
+Sunshine Health,Commercial
+Sunshine State,Commercial
+Sunshine State Health Plan,Commercial
+Sunshine State Health Plan Healthy Kids,Commercial
+Sunshine State Oncology,Commercial
+TEAMSTERS CENTRAL PA AND WELFARE [100386],Other Government
+THE HARTFORD [700076],Commercial
+THE HEALTH PLAN [100305],Commercial
+THE LOOMIS COMPANY [100328],Commercial
+THRIVENT [100326],Commercial
+TRANSAMERICA LIFE [100306],Commercial
+TRICARE,Commercial
+TRICARE FL,Commercial
+TRICARE [600001],Commercial
+TRIWEST,Other Government
+TRULI,Commercial
+TRUSTMARK HEALTH BENEFITS [100327],Commercial
+TUFTS HEALTH PLAN [100324],Commercial
+Tour + Med Assistance International,Commercial
+Tricare Military (Humana Behavioral Health),Commercial
+Trident Global Assistance International,Commercial
+UF HEALTH DIRECT CARE HMO [100267],Commercial
+UF HEALTH PROTON THERAPY INSTITUTE [500017],Commercial
+UHC,Commercial
+UHC EMPIRE [100284],Commercial
+UHC HMO,Commercial
+UHC NHP,Commercial
+UHC PPO,Commercial
+UHC WELLMED MCR REPLACEMENT,Medicare
+UHP ADMINISTRATORS [100353],Commercial
+UNICARE [100307],Commercial
+UNIFIED LIFE INSURANCE COMPANY [100337],Commercial
+UNITED AMERICAN INSURANCE [100308],Commercial
+UNITED HEALTH CARE MCD,Medicaid
+UNITED HEALTH CARE MEDICARE,Medicare
+UNITED HEALTH CARE OF FL,Commercial
+UNITED HEALTH MCR HMO/PPO [250515],Commercial
+UNITED HEALTHCARE,Commercial
+UNITED HEALTHCARE BEHAVIORAL HEALTH [100289],Commercial
+UNITED HEALTHCARE MEDICAID BEHAVIORAL HEALTH [450138],Medicaid
+UNITED HEALTHCARE MEDICAID [450112],Medicaid
+UNITED HEALTHCARE MEDICARE BEHAVIORAL HEALTH [450136],Medicare
+UNITED HEALTHCARE MEDICARE SUPPLEMENT [100275],Medicare
+UNITED HEALTHCARE MEDICARE [450021],Medicare
+UNITED HEALTHCARE [100060],Commercial
+UNITED HEALTHCARE [210402],Commercial
+UNITED MINE WORKERS [100339],Commercial
+UNITED MINE WORKERS [450033],Commercial
+UNITED WORLD LIFE INSURANCE COMPANY [100338],Commercial
+UPMC MEDICARE [450131],Commercial
+US HEALTH GROUP [100309],Commercial
+US Maritime Consultants,Commercial
+USA Manage Care Organization,Commercial
+USA Managed Care,Commercial
+USA Managed Care Organization,Commercial
+USAA AUTO [750006],Commercial
+USAA LIFE [100310],Commercial
+Ultimate,Commercial
+United,Commercial
+United AARP,Commercial
+United Healthcare,Commercial
+United Healthcare Community Plan/Healthy Kids,Commercial
+United Healthcare Oncology,Commercial
+United International,Commercial
+United/WellMed,Commercial
+VETERAN,Other Government
+VETERANS ADMINISTRATION,Other Government
+VETERANS ADMINISTRATION ALTERNATE PAYOR [100290],Other Government
+VETERANS ADMINISTRATION [100068],Other Government
+VITAS HEALTHCARE OF FLORIDA [500031],Commercial
+VIVIDA HEALTH MEDICAID [350007],Medicaid
+VOLUSIA HEALTH NETWORK [100263],Commercial
+Velocity National Provider Network,Commercial
+Velocity Provider PPO Network,Commercial
+Veterans,Other Government
+Viking Cruises,Commercial
+WC AIG [700069],Commercial
+WC ALL ELITE WRESTLING [700075],Commercial
+WC AMERISYS [700070],Commercial
+WC BAPTIST OCCUPATIONAL HEALTH [700061],Commercial
+WC BERKLEY SPECIALTY- JAGUARS [700060],Commercial
+WC BLUE CROSS [700063],Commercial
+WC CITY OF JACKSONVILLE [700065],Commercial
+WC CORVEL [700067],Commercial
+WC COVENTRY HEALTH CARE [700068],Commercial
+WC GALLAGHER & BASSET [700071],Commercial
+WC JACKSONVILLE JUMBO SHRIMP [700054],Commercial
+WC JACKSONVILLE SHARKS [700074],Commercial
+WC JOHNS EASTERN [700058],Commercial
+WC MULTIPLAN [700066],Commercial
+WC NE FL ST HOSP/FL DPT INSUR [700062],Commercial
+WC OCCUPATIONAL HLTH PHYS THER [700056],Commercial
+WC PRIME COMP [700064],Commercial
+WC SEDGWICK/PATIENT ACCOUNTING [700055],Commercial
+WC US DEPARTMENT OF LABOR [700023],Other Government
+WE CARE [500020],Commercial
+WEB TPA [100311],Commercial
+WELLCARE,Commercial
+WELLCARE HEALTH PLAN [250516],Commercial
+WELLCARE MEDICARE ADVANTAGE PLAN,Medicare
+WELLCARE MEDICARE [450129],Medicare
+WESTERN & SOUTHERN LIFE [100385],Commercial
+WPS ADMINISTRATIVE SERVICES [100340],Unknown
+WellCare,Commercial
+WellCare Healthy Kids,Commercial
+WellCare Oncology,Commercial
+WellCare/Stay Well,Commercial
+WellPath,Commercial
+Wellcare,Commercial
+Wellmed,Commercial
+World Medical Management Solutions,Commercial
+access,Commercial
+acn,Commercial
+adin,Commercial
+aetna,Commercial
+aetna better health,Commercial
+align,Commercial
+alignment,Commercial
+alignment_healthcare,Commercial
+alignment_healthcare_florida,Commercial
+ambetter,Commercial
+amcomp,Commercial
+american,Commercial
+americas,Commercial
+amerigroup,Commercial
+amerihealth,Commercial
+amps,Commercial
+anthem,Commercial
+assurant,Commercial
+assured,Commercial
+auto,Commercial
+avmed,Commercial
+avmed_,Commercial
+avmed_health_plan,Commercial
+axis,Commercial
+barnett,Commercial
+baycare,Commercial
+baycare_select,Commercial
+baycare_select_health_plans,Commercial
+bc,Commercial
+bc/bs,Commercial
+bcbs,Commercial
+beacon,Commercial
+beech,Commercial
+beech_street_,Commercial
+beech_street_corporation,Commercial
+beech_street_corporation_,Commercial
+beech_street_corporation_-_accelerated,Commercial
+behavioral,Commercial
+behealthy,Commercial
+better,Commercial
+better_health_medicaid,Medicaid
+blis,Commercial
+blue,Commercial
+blue cross blue shield,Commercial
+blue_cross,Commercial
+blue_cross_&_blue_shield_of_florida,Commercial
+blue_cross_&_blue_shield_of_florida_,Commercial
+bright,Commercial
+bristol,Commercial
+capital,Commercial
+care,Commercial
+carelon,Commercial
+carelon_behavioral_,Commercial
+careplus,Commercial
+caresource,Commercial
+careworks,Commercial
+carisk,Commercial
+catholic,Commercial
+cenpatico,Commercial
+centene,Commercial
+centivo,Commercial
+centurion,Commercial
+charity,Commercial
+childrens,Commercial
+choice,Commercial
+choicecare,Commercial
+chs,Commercial
+cigna,Commercial
+city,Commercial
+classica,Commercial
+clay,Commercial
+clear,Commercial
+clover,Commercial
+commercial,Commercial
+commercial-historical,Commercial
+community,Commercial
+compassionate,Commercial
+comprehensive,Commercial
+concordia,Commercial
+confident,Commercial
+contigo,Commercial
+corizon,Commercial
+correct,Commercial
+correctional,Commercial
+corvel,Commercial
+coventry,Commercial
+covid19,Unknown
+devoted,Commercial
+devoted_health,Commercial
+dimension,Commercial
+dimensions,Commercial
+direct,Commercial
+disney,Commercial
+district,Commercial
+doctors,Commercial
+easter,Commercial
+edhc,Commercial
+emerging,Commercial
+employer,Commercial
+employers,Commercial
+enlyte/genex/coventry,Commercial
+equian,Commercial
+evernorth,Commercial
+evolutions,Commercial
+fhcp,Commercial
+first,Commercial
+first_health,Commercial
+first_health_network,Commercial
+fl,Commercial
+florida,Commercial
+florida blue,Commercial
+florida_community_care,Commercial
+florida_health_care_plan,Commercial
+florida_healthcare_plan,Commercial
+freedom,Commercial
+freedom_health,Commercial
+gadsden,Commercial
+galaxy,Commercial
+gasparilla,Commercial
+gbg_administrative_services,Commercial
+geha,Commercial
+geo,Commercial
+gmmi,Commercial
+gold,Commercial
+haa,Commercial
+hcr,Commercial
+health,Commercial
+health_first,Commercial
+health_first_health,Commercial
+"health_first_health_plans,_inc.",Commercial
+healthcare,Commercial
+healthfirst,Commercial
+healthfirst_plans,Commercial
+healthnet,Commercial
+healthone_alliance,Commercial
+healthspring,Commercial
+healthsun,Commercial
+healthy,Commercial
+heritage,Commercial
+hernando-pasco,Commercial
+hillsborough,Commercial
+hospice,Commercial
+humana,Commercial
+ilumed,Commercial
+ima,Commercial
+imagine,Commercial
+independent,Commercial
+ingle,Commercial
+integral,Commercial
+integrated,Commercial
+interplan,Commercial
+interplan_health_group,Commercial
+jipa,Commercial
+keys,Commercial
+kindred,Commercial
+leon,Commercial
+life,Commercial
+lifepath,Commercial
+lifetrac,Commercial
+liga,Commercial
+lighthouse,Commercial
+longevity,Commercial
+longevity_health_plan,Commercial
+lucet,Commercial
+lucet_,Commercial
+magellan,Commercial
+mailhandlers,Commercial
+marion,Commercial
+maritime,Commercial
+md,Medicaid
+medica,Commercial
+medicaid,Commercial
+medicare,Medicare
+medrisk,Commercial
+mental,Commercial
+meritain,Commercial
+metracomp,Commercial
+miscellaneous,Commercial
+mmm,Commercial
+molina,Commercial
+molina healthcare,Commercial
+monroe,Commercial
+mount,Commercial
+msmc,Commercial
+multiplan,Commercial
+mutual,Commercial
+naphcare,Commercial
+national,Commercial
+national_healthcare_solution,Commercial
+national_healthcare_solutions,Commercial
+nch,Commercial
+ndms,Commercial
+new,Unknown
+node,Commercial
+non-contracted,Unknown
+novanet,Commercial
+nppn,Commercial
+occunet,Commercial
+odyssey,Commercial
+office,Unknown
+one,Unknown
+optimum,Commercial
+optimum_healthcare,Commercial
+optum,Commercial
+optum/va,Other Government
+opus,Commercial
+opuscare,Commercial
+orchard,Commercial
+oscar,Commercial
+oscar health,Commercial
+other,Unknown
+palm,Commercial
+pasco,Commercial
+payer,Unknown
+ped-i-care,Commercial
+penfield,Commercial
+pensacola,Commercial
+phcs,Commercial
+physician,Commercial
+pinellas,Commercial
+plotkin,Commercial
+pmc,Commercial
+point,Commercial
+polkin_health,Commercial
+positive,Commercial
+ppo,Commercial
+preferred,Commercial
+prestige,Commercial
+prime,Commercial
+private_healthcare_system,Commercial
+private_healthcare_systems,Commercial
+prominence,Commercial
+protegrity,Commercial
+protocol_tertiary_networks,Commercial
+regency,Commercial
+rockport,Commercial
+s,Unknown
+school,Commercial
+seasons,Commercial
+select,Commercial
+self,Self Pay
+self-pay,Self Pay
+selfpay,Self Pay
+seminole,Commercial
+seven,Commercial
+simply,Commercial
+simply_health,Commercial
+simply_healthcare,Commercial
+simply_healthcare_plans,Commercial
+single,Commercial
+solis,Commercial
+south,Commercial
+southcare,Commercial
+spreemo,Commercial
+star,Commercial
+state,Other Government
+streamline,Commercial
+suncoast,Commercial
+sunshine,Commercial
+sunshine_state,Commercial
+sunshine_state_health_,Commercial
+sunshine_state_health_plan,Commercial
+sunshinexch,Commercial
+swing,Commercial
+techhealth,Commercial
+tehtys_health_ventures,Commercial
+texas,Other Government
+the,Unknown
+three,Unknown
+tour,Unknown
+town,Unknown
+tricare,Commercial
+triwest,Other Government
+truli,Commercial
+uhc,Commercial
+ultimate,Commercial
+united,Commercial
+united healthcare,Commercial
+united_healthcare,Commercial
+united_optum,Commercial
+unitedhealth,Commercial
+university,Commercial
+upmc,Commercial
+upmc_health_plan,Commercial
+us,Other Government
+usa,Other Government
+va,Other Government
+value,Commercial
+veterans,Commercial
+vitas,Commercial
+volusia,Commercial
+wellcare,Commercial
+wellcare/staywell,Commercial
+wellcare_of_florida,Commercial
+wellmed,Commercial
+wellpath,Commercial
+westchester,Commercial
+workers,Commercial
+workmans,Commercial
+zelis,Commercial
