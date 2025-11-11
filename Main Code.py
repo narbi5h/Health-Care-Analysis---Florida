@@ -2,6 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine, text, bindparam
 import os
 import numpy as np
+import re
 
 
 #### Database Connection Setup
@@ -68,40 +69,124 @@ for col in cols_to_float:
 
 
 #### Determine Rate Amount of the Procedures
+SENTINEL = 999999999.0
 
+pct   = merge_df['standard_charge_negotiated_percentage']
+gross = merge_df['standard_charge_gross']
+doll  = merge_df['standard_charge_negotiated_dollar']
+est   = merge_df['estimated_amount']
+smax  = merge_df['standard_charge_max']
+
+# If your percentages are like 55.0 for 55%, keep /100. If already 0.55, remove /100.
+pct_factor = pct / 100.0
+
+# Masks
+has_dollar      = doll.notna()
+has_pct_gross   = pct.notna() & gross.notna()
+has_pct_est     = pct.notna() & est.notna() & (est != 0) & (est != SENTINEL)
+has_pct_max     = pct.notna() & smax.notna()
+
+no_negotiated   = doll.isna() & pct.isna()
+fallback_est    = no_negotiated & est.notna() & (est != 0) & (est != SENTINEL)
+fallback_gross  = no_negotiated & gross.notna()
+fallback_max    = no_negotiated & smax.notna()
 
 merge_df['Rate'] = np.select(
     [
-        # 1️⃣ If standard_charge_negotiated_dollar is not null
-        merge_df['standard_charge_negotiated_dollar'].notna(),
+        # 1) negotiated dollar
+        has_dollar,
 
-        # 2️⃣ If percentage + gross both exist
-        merge_df['standard_charge_negotiated_percentage'].notna() & merge_df['standard_charge_gross'].notna(),
+        # 2) percentage path (priority: gross -> estimated -> max)
+        has_pct_gross,
+        has_pct_est,
+        has_pct_max,
 
-        # 3️⃣ If percentage + valid estimated_amount exist
-        (merge_df['standard_charge_negotiated_percentage'].notna()) &
-        (merge_df['estimated_amount'].notna()) &
-        (merge_df['estimated_amount'] != 999999999.0),
-
-        # 4️⃣ If percentage + standard_charge_max exist
-        merge_df['standard_charge_negotiated_percentage'].notna() & merge_df['standard_charge_max'].notna(),
+        # 3) when BOTH negotiated fields are null → fallbacks
+        fallback_est,
+        fallback_gross,
+        fallback_max,
     ],
     [
-        # Corresponding calculations
-        merge_df['standard_charge_negotiated_dollar'],
-
-        merge_df['standard_charge_gross'] * (merge_df['standard_charge_negotiated_percentage'] / 100),
-
-        merge_df['estimated_amount'] * (merge_df['standard_charge_negotiated_percentage'] / 100),
-
-        merge_df['standard_charge_max'] * (merge_df['standard_charge_negotiated_percentage'] / 100),
+        doll,
+        gross * pct_factor,
+        est   * pct_factor,
+        smax  * pct_factor,
+        est,
+        gross,
+        smax,
     ],
     default=np.nan
 )
 
+#### Format Hospital Address ZIP Codes
+merge_df['hospital_address'] = merge_df['hospital_address'].str.replace(
+    r'(\b\d{5})(\d{4}\b)',
+    r'\1-\2',
+    regex=True
+)
+
+#### SPLIT MULTI-ADDRESS ROWS INTO MULTIPLE ROWS
+
+# make a list of addresses per row (split on | with or without spaces) ---
+merge_df = merge_df.copy()
+
+merge_df['address_list'] = (
+    merge_df['hospital_address']
+      .fillna('')
+      .apply(lambda x: [a.strip() for a in re.split(r'\s*\|\s*', str(x)) if a.strip()])
+)
+
+# how many locations were in that row
+merge_df['num_locations'] = merge_df['address_list'].apply(len)
+
+# --- 2) explode to one row per address ---
+exploded = (
+    merge_df
+      .explode('address_list', ignore_index=True)
+      .rename(columns={'address_list': 'hospital_address_single'})
+)
+
+# flag whether the price was system-applied (multiple addresses) or facility-specific
+exploded['price_scope'] = np.where(exploded['num_locations'] > 1, 'system_applied', 'facility_specific')
+
+# --- 3) improved ZIP extraction (take LAST ZIP, not first) ---
+# find all 5-digit or ZIP+4 patterns
+zip_candidates = exploded['hospital_address_single'].str.findall(r'\b\d{5}(?:-\d{4})?\b')
+
+# ZIP4 = last candidate in each address, if any exist
+exploded['ZIP4'] = zip_candidates.apply(lambda xs: xs[-1] if isinstance(xs, list) and len(xs) else pd.NA)
+
+# ZIP = first 5 digits of ZIP4
+exploded['ZIP'] = exploded['ZIP4'].astype('string').str.slice(0, 5)
+
+# ensure text type (important for leading zeros)
+exploded['ZIP']  = exploded['ZIP'].astype('string')
+exploded['ZIP4'] = exploded['ZIP4'].astype('string')
+
+# --- 4) (optional) tidy columns/order ---
+cols_front = ['hospital_name', 'hospital_address_single', 'ZIP', 'ZIP4', 'num_locations', 'price_scope']
+other_cols = [c for c in exploded.columns if c not in cols_front]
+exploded = exploded[cols_front + other_cols]
+
+cols_keep = [
+    'hospital_name', 'hospital_address_single', 'ZIP4', 'setting', 'modifiers', 'standard_charge_gross',
+    'standard_charge_discounted_cash', 'payer_name', 'plan_name',
+    'standard_charge_negotiated_dollar', 'standard_charge_negotiated_percentage', 'estimated_amount',
+    'standard_charge_min', 'standard_charge_max', 'cpt_code', 'Description',
+    'Specialty', 'Rate'
+]
+
+missing = [c for c in cols_keep if c not in exploded.columns]
+
+exploded = exploded[cols_keep].copy()
+
+# write top 20 rows to CSV
+exploded.head(20).to_csv(f"{curr_path}/top20_exploded_cpt_data.csv", index=False)
+
+
+
 
 #### Check Missing Values
-
 
 
 #### Descriptive Analytics
