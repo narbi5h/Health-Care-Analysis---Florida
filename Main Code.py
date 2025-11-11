@@ -172,7 +172,7 @@ cols_keep = [
     'hospital_name', 'hospital_address_single', 'ZIP4', 'setting', 'modifiers', 'standard_charge_gross',
     'standard_charge_discounted_cash', 'payer_name', 'plan_name',
     'standard_charge_negotiated_dollar', 'standard_charge_negotiated_percentage', 'estimated_amount',
-    'standard_charge_min', 'standard_charge_max', 'cpt_code', 'Description',
+    'standard_charge_min', 'standard_charge_max', 'bucket', 'specification', 'cpt_code', 'Description',
     'Specialty', 'Rate'
 ]
 
