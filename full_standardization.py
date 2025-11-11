@@ -78,26 +78,12 @@ ENGINE = build_engine_with_ssl_fallback()
 
 # =========================== CPT-FILTERED SELECT ===============================
 sql_pass2 = f"""
-SELECT
-  md5(
-    coalesce(lower(trim(hcc.{DESCR_COL})),'') || '|' ||
-    coalesce(lower(trim(hcc.{CODE_COL})),'')  || '|' ||
-    coalesce(lower(trim(hcc.{CTYPE_COL})),'')
-  ) AS row_key,
-  b.hospital_name,
-  b.hospital_location,
-  b.hospital_address,
-  hcc.{PAYER_COL} AS payer_name,
-  hcc.{PLAN_COL}  AS plan_name
-FROM {SCHEMA}.hospital_cpt_charges hcc
-JOIN {SCHEMA}.hospital_metadata b
-  ON hcc.source_file = b.source_file
-WHERE TRIM(hcc.{CODE_COL}) IN (
-  '20610','20611','27477','27130','20600','20605','29827','29881','26055','29826'
-)
-AND (hcc.{PAYER_COL} IS NOT NULL OR hcc.{PLAN_COL} IS NOT NULL)
+select b.hospital_name, b.hospital_location, b.hospital_address, hcc.* 
+from hospital_cpt_charges hcc 
+join hospital_metadata b on hcc.source_file=b.source_file 
+where TRIM(hcc.code) in ('20610','20611','27477','27130','20600','20605','29827','29881','26055','29826')
 """
-print("[INFO] CPT-filtered SQL (sql_pass2) loaded.")
+print("[INFO] CPT-filtered SQL {sql_pass2} loaded.")
 
 # =============================== DB HELPERS ====================================
 def ensure_specs_tables(engine, schema: str):

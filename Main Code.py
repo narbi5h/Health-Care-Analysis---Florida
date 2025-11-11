@@ -3,6 +3,8 @@ from sqlalchemy import create_engine, text, bindparam
 import os
 import numpy as np
 import re
+import payer_plan_distinct_pull
+import full_standardization
 
 
 #### Database Connection Setup
@@ -67,6 +69,23 @@ for col in cols_to_float:
         .astype(float)
     )
 
+#### payer/plan export and standardization runs
+### Run payer/plan distinct export
+if os.getenv("RUN_DISTINCT_PULL", "false").lower() == "true":
+    print("\n[INFO] Running payer_plan_distinct_pull script...")
+    # Call the script as a module; it will execute its own logic
+    payer_plan_distinct_pull.main()
+## 2 CSVs will be created in the current directory:
+#   - distinct_payers.csv
+#   - distinct_plans.csv
+## need to manually bucket and spec these files before running full_standardization
+### Run full standardization / bucket-spec pipeline
+## If you want to run to write in DB, then set the variable in "full_standardization.py" to "DRY_RUN = false"
+## If there are no bucket/spec columns in DB, set the variable in "full_standardization.py" to "ADD_BUCKET_SPEC_COLUMNS", "true"
+# Default: DRY_RUN = True, "ADD_BUCKET_SPEC_COLUMNS", "false"
+if os.getenv("RUN_STANDARDIZATION", "false").lower() == "true":
+    print("\n[INFO] Running full_standardization script...")
+    full_standardization.main()
 
 #### Determine Rate Amount of the Procedures
 SENTINEL = 999999999.0
