@@ -32,12 +32,12 @@ SPEC_COL   = os.getenv("SPEC_COL",   "specification")
 PAYER_CSV = os.getenv("PAYER_CSV", str(Path.cwd() / "distinct_payers.csv"))
 PLAN_CSV  = os.getenv("PLAN_CSV",  str(Path.cwd() / "distinct_plans.csv"))
 
-DRY_RUN = os.getenv("DRY_RUN", "true").lower() == "true"
-ADD_BUCKET_SPEC_COLUMNS = os.getenv("ADD_BUCKET_SPEC_COLUMNS", "false").lower() == "true"
+DRY_RUN = os.getenv("DRY_RUN", "false").lower() == "true"
+# ADD_BUCKET_SPEC_COLUMNS = os.getenv("ADD_BUCKET_SPEC_COLUMNS", "true").lower() == "true"
 
 print(f"[INFO] Connecting -> host={DB_HOST} port={DB_PORT} db={DB_NAME} user={DB_USER} sslmode={SSL_MODE}")
 print(f"[INFO] Using CSV files:\n       payers={PAYER_CSV}\n       plans={PLAN_CSV}")
-print(f"[INFO] Modes: DRY_RUN={DRY_RUN} ADD_BUCKET_SPEC_COLUMNS={ADD_BUCKET_SPEC_COLUMNS}")
+# print(f"[INFO] Modes: DRY_RUN={DRY_RUN} ADD_BUCKET_SPEC_COLUMNS={ADD_BUCKET_SPEC_COLUMNS}")
 
 # =========================== ENGINE ============================================
 def build_engine_with_ssl_fallback():
@@ -75,15 +75,6 @@ def build_engine_with_ssl_fallback():
         raise
 
 ENGINE = build_engine_with_ssl_fallback()
-
-# =========================== CPT-FILTERED SELECT ===============================
-sql_pass2 = f"""
-select b.hospital_name, b.hospital_location, b.hospital_address, hcc.* 
-from hospital_cpt_charges hcc 
-join hospital_metadata b on hcc.source_file=b.source_file 
-where TRIM(hcc.code) in ('20610','20611','27477','27130','20600','20605','29827','29881','26055','29826')
-"""
-print("[INFO] CPT-filtered SQL {sql_pass2} loaded.")
 
 # =============================== DB HELPERS ====================================
 def ensure_specs_tables(engine, schema: str):
@@ -258,20 +249,20 @@ def main():
             upsert_specs(ENGINE, SCHEMA, "payer_specs", payer_rows)
             print(f"[OK] Upserted {len(payer_rows):,} payer specs")
 
-    if ADD_BUCKET_SPEC_COLUMNS:
-        if DRY_RUN:
-            print(f"[DRY RUN] Would ensure and backfill {BUCKET_COL}/{SPEC_COL} on {TABLE}")
-        else:
-            print(f"[INFO] Ensuring '{BUCKET_COL}', '{SPEC_COL}' and backfilling from CSVs...")
-            ensure_bucket_spec_columns(ENGINE, SCHEMA, TABLE, BUCKET_COL, SPEC_COL)
-            backfill_bucket_spec_from_lookups(
-                ENGINE, SCHEMA, TABLE,
-                payer_col=PAYER_COL, plan_col=PLAN_COL,
-                bucket_col=BUCKET_COL, spec_col=SPEC_COL
-            )
-            print("[OK] Backfill complete.")
-    else:
-        print("[INFO] ADD_BUCKET_SPEC_COLUMNS is false — skipping backfill.")
+    # if ADD_BUCKET_SPEC_COLUMNS:
+    #     if DRY_RUN:
+    #         print(f"[DRY RUN] Would ensure and backfill {BUCKET_COL}/{SPEC_COL} on {TABLE}")
+    #     else:
+    #         print(f"[INFO] Ensuring '{BUCKET_COL}', '{SPEC_COL}' and backfilling from CSVs...")
+    #         ensure_bucket_spec_columns(ENGINE, SCHEMA, TABLE, BUCKET_COL, SPEC_COL)
+    #         backfill_bucket_spec_from_lookups(
+    #             ENGINE, SCHEMA, TABLE,
+    #             payer_col=PAYER_COL, plan_col=PLAN_COL,
+    #             bucket_col=BUCKET_COL, spec_col=SPEC_COL
+    #         )
+    #         print("[OK] Backfill complete.")
+    # else:
+    #     print("[INFO] ADD_BUCKET_SPEC_COLUMNS is false — skipping backfill.")
 
     print("[DONE] CSV-driven bucketing/specification is ready.")
 

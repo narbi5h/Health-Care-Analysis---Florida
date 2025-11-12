@@ -3,18 +3,14 @@ from sqlalchemy import create_engine, text, bindparam
 import os
 import numpy as np
 import re
-import payer_plan_distinct_pull
-import full_standardization
-
+# import payer_plan_distinct_pull
+# import full_standardization
 
 #### Database Connection Setup
 
-
-
+print("[INFO] Setting up database connection...")
 DB = "postgresql+psycopg2://postgres:verdansk2020!@iamr007.ddns.net:2345/hospital_db"
 engine = create_engine(DB, pool_pre_ping=True)
-
-
 
 ### IDENTIFY CPT CODES FOR QUERIES DRIVEN BY CPT CODES CSV FILE
 curr_path = os.getcwd()
@@ -30,15 +26,38 @@ if not cpt_list:
 
 cpts['cpt_code'] = cpts['cpt_code'].astype(str)
 
+###### Add Bucketing and Specification Columns to Payer/Plan Standardization Pipeline, consider moving to separate script
+# #### payer/plan export and standardization runs
+# ### Run payer/plan distinct export
+# if os.getenv("RUN_DISTINCT_PULL", "false").lower() == "true":
+#     print("\n[INFO] Running payer_plan_distinct_pull script...")
+#     # Call the script as a module; it will execute its own logic
+#     payer_plan_distinct_pull.main()
+# ## 2 CSVs will be created in the current directory:
+# #   - distinct_payers.csv
+# #   - distinct_plans.csv
+# ## need to manually bucket and spec these files before running full_standardization
+# ### Run full standardization / bucket-spec pipeline
+# ## If you want to run to write in DB, then set the variable in "full_standardization.py" to "DRY_RUN = false"
+# ## If there are no bucket/spec columns in DB, set the variable in "full_standardization.py" to "ADD_BUCKET_SPEC_COLUMNS", "true"
+# # Default: DRY_RUN = True, "ADD_BUCKET_SPEC_COLUMNS", "false"
+# if os.getenv("RUN_STANDARDIZATION", "false").lower() == "true":
+#     print("\n[INFO] Running full_standardization script...")
+#     full_standardization.main()
+
 ### SQL QUERY
 
 sql = text("""
 select b.hospital_name, b.hospital_address, 
 		   hcc.description, hcc.code, hcc.setting, hcc.modifiers, hcc.standard_charge_gross, hcc.standard_charge_discounted_cash, hcc.payer_name, hcc.plan_name, 
-		   hcc.standard_charge_negotiated_dollar, standard_charge_negotiated_percentage, hcc.estimated_amount, hcc.standard_charge_min, hcc.standard_charge_max		   
+		   hcc.standard_charge_negotiated_dollar, standard_charge_negotiated_percentage, hcc.estimated_amount, hcc.standard_charge_min, hcc.standard_charge_max,
+           COALESCE(ps.bucket, ys.bucket) as bucket,
+           COALESCE(ps.specification, ys.specification) as specification		   
 from hospital_cpt_charges hcc
 join hospital_metadata b
-on hcc.source_file=b.source_file
+    ON hcc.source_file = b.source_file
+left join plan_specs ps ON ps.name = hcc.plan_name
+left join payer_specs ys ON ys.name = hcc.payer_name
 WHERE hcc.code IN :cpts
 """).bindparams(bindparam("cpts", expanding=True))
 
@@ -59,6 +78,7 @@ cols_to_float = [
 ]
 
 # Clean and convert to float safely
+print("[INFO] Converting columns to float...")
 for col in cols_to_float:
     merge_df[col] = (
         merge_df[col]
@@ -68,24 +88,6 @@ for col in cols_to_float:
         .replace(['', 'None', 'nan', 'NaN'], np.nan)  # treat blanks as NaN
         .astype(float)
     )
-
-#### payer/plan export and standardization runs
-### Run payer/plan distinct export
-if os.getenv("RUN_DISTINCT_PULL", "false").lower() == "true":
-    print("\n[INFO] Running payer_plan_distinct_pull script...")
-    # Call the script as a module; it will execute its own logic
-    payer_plan_distinct_pull.main()
-## 2 CSVs will be created in the current directory:
-#   - distinct_payers.csv
-#   - distinct_plans.csv
-## need to manually bucket and spec these files before running full_standardization
-### Run full standardization / bucket-spec pipeline
-## If you want to run to write in DB, then set the variable in "full_standardization.py" to "DRY_RUN = false"
-## If there are no bucket/spec columns in DB, set the variable in "full_standardization.py" to "ADD_BUCKET_SPEC_COLUMNS", "true"
-# Default: DRY_RUN = True, "ADD_BUCKET_SPEC_COLUMNS", "false"
-if os.getenv("RUN_STANDARDIZATION", "false").lower() == "true":
-    print("\n[INFO] Running full_standardization script...")
-    full_standardization.main()
 
 #### Determine Rate Amount of the Procedures
 SENTINEL = 999999999.0
@@ -100,6 +102,7 @@ smax  = merge_df['standard_charge_max']
 pct_factor = pct / 100.0
 
 # Masks
+print("[INFO] Masking values...")
 has_dollar      = doll.notna()
 has_pct_gross   = pct.notna() & gross.notna()
 has_pct_est     = pct.notna() & est.notna() & (est != 0) & (est != SENTINEL)
@@ -138,6 +141,7 @@ merge_df['Rate'] = np.select(
 )
 
 #### Format Hospital Address ZIP Codes
+print("[INFO] Formatting hospital address ZIP codes...")
 merge_df['hospital_address'] = merge_df['hospital_address'].str.replace(
     r'(\b\d{5})(\d{4}\b)',
     r'\1-\2',
@@ -147,6 +151,7 @@ merge_df['hospital_address'] = merge_df['hospital_address'].str.replace(
 #### SPLIT MULTI-ADDRESS ROWS INTO MULTIPLE ROWS
 
 # make a list of addresses per row (split on | with or without spaces) ---
+print("[INFO] Exploding multi-address rows into single-address rows...")
 merge_df = merge_df.copy()
 
 merge_df['address_list'] = (
@@ -183,6 +188,7 @@ exploded['ZIP']  = exploded['ZIP'].astype('string')
 exploded['ZIP4'] = exploded['ZIP4'].astype('string')
 
 # --- 4) (optional) tidy columns/order ---
+print("[INFO] Finalizing exploded DataFrame...")
 cols_front = ['hospital_name', 'hospital_address_single', 'ZIP', 'ZIP4', 'num_locations', 'price_scope']
 other_cols = [c for c in exploded.columns if c not in cols_front]
 exploded = exploded[cols_front + other_cols]
@@ -201,6 +207,7 @@ exploded = exploded[cols_keep].copy()
 
 # write top 20 rows to CSV
 exploded.head(20).to_csv(f"{curr_path}/top20_exploded_cpt_data.csv", index=False)
+print("[OK] Wrote top 20 exploded CPT data to 'top20_exploded_cpt_data.csv'")
 
 
 
