@@ -74,8 +74,10 @@ cols_to_float = [
     'standard_charge_negotiated_percentage',
     'estimated_amount',
     'standard_charge_min',
-    'standard_charge_max'
+    'standard_charge_max',
+    'standard_charge_discounted_cash'
 ]
+
 
 # Clean and convert to float safely
 print("[INFO] Converting columns to float...")
@@ -125,8 +127,8 @@ merge_df['Rate'] = np.select(
 
         # 3) when BOTH negotiated fields are null → fallbacks
         fallback_est,
-        fallback_gross,
         fallback_max,
+        fallback_gross,
     ],
     [
         doll,
@@ -134,11 +136,24 @@ merge_df['Rate'] = np.select(
         est   * pct_factor,
         smax  * pct_factor,
         est,
-        gross,
         smax,
+        gross,
     ],
     default=np.nan
 )
+
+
+#create a new column called updated rate where if the bucket is 'Self Pay' then the rate is standard_charge_negotiated_dollar if not null, otherwise take standard_charge_discounted_cash. For all other buckets, the rate remains the same.
+merge_df['Rate'] = np.where(
+    merge_df['bucket'] == 'Self Pay',
+    np.where(
+        merge_df['standard_charge_negotiated_dollar'].notna(),
+        merge_df['standard_charge_negotiated_dollar'],
+        merge_df['standard_charge_discounted_cash']
+    ),
+    merge_df['Rate']
+)
+
 
 #### Format Hospital Address ZIP Codes
 print("[INFO] Formatting hospital address ZIP codes...")
@@ -196,7 +211,7 @@ exploded = exploded[cols_front + other_cols]
 cols_keep = [
     'hospital_name', 'hospital_address_single', 'ZIP4', 'setting', 'modifiers', 'standard_charge_gross',
     'standard_charge_discounted_cash', 'payer_name', 'plan_name',
-    'standard_charge_negotiated_dollar', 'standard_charge_negotiated_percentage', 'estimated_amount',
+    'standard_charge_negotiated_dollar', 'standard_charge_negotiated_percentage', 
     'standard_charge_min', 'standard_charge_max', 'bucket', 'specification', 'cpt_code', 'Description',
     'Specialty', 'Rate'
 ]
@@ -205,9 +220,10 @@ missing = [c for c in cols_keep if c not in exploded.columns]
 
 exploded = exploded[cols_keep].copy()
 
-# write top 20 rows to CSV
-exploded.head(20).to_csv(f"{curr_path}/top20_exploded_cpt_data.csv", index=False)
-print("[OK] Wrote top 20 exploded CPT data to 'top20_exploded_cpt_data.csv'")
+
+# write rows to CSV
+exploded.to_csv(f"{curr_path}/exploded_cpt_data.csv", index=False)
+print("[OK] Wrote top exploded CPT data to 'exploded_cpt_data.csv'")
 
 
 
