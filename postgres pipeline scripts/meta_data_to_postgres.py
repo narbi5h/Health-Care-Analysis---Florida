@@ -232,15 +232,3 @@ def load_first_two_rows_metadata_to_postgres(
     )
 
     return df_out
-
-# # ---------------------------
-# # Example usage:
-# # ---------------------------
-# df_logged = load_first_two_rows_metadata_to_postgres(
-#     folder=(INPUT_FOLDER),
-#     pg_conn_str="postgresql+psycopg2://postgres:BANA650@localhost:5432/postgres",  #LOCAL POSTGRES 
-#     # pg_conn_str="postgresql+psycopg2://postgres:verdansk2020!@iamr007.ddns.net:2345/postgres", #REMOTE POSTGRES
-#     table_name="hospital_metadata_test",
-#     schema="public",
-# )
-# print(df_logged.head())

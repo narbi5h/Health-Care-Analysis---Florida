@@ -3,18 +3,25 @@
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 import pandas as pd
 from sqlalchemy import create_engine, text as sqltext
 from sqlalchemy.engine import URL
 from sqlalchemy.exc import OperationalError
 
 # =============================== CONFIG ========================================
-DB_HOST = os.getenv("DB_HOST", "iamr007.ddns.net")
-DB_PORT = int(os.getenv("DB_PORT", "2345"))
-DB_NAME = os.getenv("DB_NAME", "hospital_db")
-DB_USER = os.getenv("DB_USER", "postgres")
-DB_PASS = os.getenv("DB_PASSWORD", "verdansk2020!")
-SSL_MODE = os.getenv("DB_SSLMODE", "prefer")  # prefer | require | disable
+load_dotenv()
+
+DB_USER = os.getenv("DB_USER")
+DB_PASS = os.getenv("DB_PASS")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
+
+DB_URL = f"postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
+engine = create_engine(DB_URL, pool_pre_ping=True)
+print("[INFO] Database engine created.")
 
 SCHEMA     = os.getenv("DB_SCHEMA", "public")
 TABLE_NAME = os.getenv("DB_TABLE",  "hospital_cpt_charges")
