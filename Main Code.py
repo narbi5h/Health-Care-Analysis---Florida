@@ -99,6 +99,7 @@ gross = merge_df['standard_charge_gross']
 doll  = merge_df['standard_charge_negotiated_dollar']
 est   = merge_df['estimated_amount']
 smax  = merge_df['standard_charge_max']
+smin = merge_df['standard_charge_min']
 
 # If your percentages are like 55.0 for 55%, keep /100. If already 0.55, remove /100.
 pct_factor = pct / 100.0
@@ -109,13 +110,15 @@ has_dollar      = doll.notna()
 has_pct_gross   = pct.notna() & gross.notna()
 has_pct_est     = pct.notna() & est.notna() & (est != 0) & (est != SENTINEL)
 has_pct_max     = pct.notna() & smax.notna()
+has_pct_min     = pct.notna() & smin.notna()
 
 no_negotiated   = doll.isna() & pct.isna()
 fallback_est    = no_negotiated & est.notna() & (est != 0) & (est != SENTINEL)
 fallback_gross  = no_negotiated & gross.notna()
 fallback_max    = no_negotiated & smax.notna()
+fallback_min    = no_negotiated & smin.notna()
 
-merge_df['Rate'] = np.select(
+merge_df['Rate_using_max'] = np.select(
     [
         # 1) negotiated dollar
         has_dollar,
@@ -142,18 +145,53 @@ merge_df['Rate'] = np.select(
     default=np.nan
 )
 
+merge_df['Rate_using_min'] = np.select(
+    [
+        # 1) negotiated dollar
+        has_dollar,
+
+        # 2) percentage path (priority: gross -> estimated -> min)
+        has_pct_gross,
+        has_pct_est,
+        has_pct_min,
+
+        # 3) when BOTH negotiated fields are null → fallbacks
+        fallback_est,
+        fallback_min,
+        fallback_gross,
+    ],
+    [
+        doll,
+        gross * pct_factor,
+        est   * pct_factor,
+        smin  * pct_factor,
+        est,
+        smin,
+        gross,
+    ],
+    default=np.nan
+)
 
 #create a new column called updated rate where if the bucket is 'Self Pay' then the rate is standard_charge_negotiated_dollar if not null, otherwise take standard_charge_discounted_cash. For all other buckets, the rate remains the same.
-merge_df['Rate'] = np.where(
+merge_df['Rate_using_max'] = np.where(
     merge_df['bucket'] == 'Self Pay',
     np.where(
         merge_df['standard_charge_negotiated_dollar'].notna(),
         merge_df['standard_charge_negotiated_dollar'],
         merge_df['standard_charge_discounted_cash']
     ),
-    merge_df['Rate']
+    merge_df['Rate_using_max']
 )
 
+merge_df['Rate_using_min'] = np.where(
+    merge_df['bucket'] == 'Self Pay',
+    np.where(
+        merge_df['standard_charge_negotiated_dollar'].notna(),
+        merge_df['standard_charge_negotiated_dollar'],
+        merge_df['standard_charge_discounted_cash']
+    ),
+    merge_df['Rate_using_min']
+)
 
 #### Format Hospital Address ZIP Codes
 print("[INFO] Formatting hospital address ZIP codes...")
@@ -213,7 +251,7 @@ cols_keep = [
     'standard_charge_discounted_cash', 'payer_name', 'plan_name',
     'standard_charge_negotiated_dollar', 'standard_charge_negotiated_percentage', 
     'standard_charge_min', 'standard_charge_max', 'bucket', 'specification', 'cpt_code', 'Description',
-    'Specialty', 'Rate'
+    'Specialty', 'Rate_using_min', 'Rate_using_max'
 ]
 
 missing = [c for c in cols_keep if c not in exploded.columns]
@@ -223,9 +261,11 @@ exploded = exploded[cols_keep].copy()
 
 # write rows to CSV
 exploded.to_csv(f"{curr_path}/exploded_cpt_data.csv", index=False)
-print("[OK] Wrote top exploded CPT data to 'exploded_cpt_data.csv'")
+print("[OK] Wrote exploded CPT data to 'exploded_cpt_data.csv'")
 
-
+# Create a new table in the database to store the exploded CPT data
+exploded.to_sql('standardized_cpt_columns', engine, if_exists='replace', index=True)
+print("[OK] Wrote exploded CPT data to 'standardized_cpt_columns' table in the database.")
 
 
 #### Check Missing Values
