@@ -2,17 +2,27 @@
 # pip install pandas sqlalchemy psycopg2-binary python-dotenv
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 import pandas as pd
 from sqlalchemy import create_engine, text as sqltext, MetaData, Table, Column, Text
 from sqlalchemy.engine import URL
 from sqlalchemy.exc import OperationalError
 
 # =============================== CONFIG ========================================
-DB_HOST = os.getenv("DB_HOST", "iamr007.ddns.net")
-DB_PORT = int(os.getenv("DB_PORT", "2345"))
+# --- Try to load .env if present ---
+env_path = Path(__file__).resolve().parent / ".env"
+if env_path.exists():
+    load_dotenv(env_path)
+    print(f"[INFO] Loaded environment variables from {env_path}")
+else:
+    print("[INFO] No .env file found; using system environment variables")
+
+# --- Read database connection settings ---
+DB_HOST = os.getenv("DB_HOST") or "localhost"
+DB_PORT = int(os.getenv("DB_PORT", "5432"))
 DB_NAME = os.getenv("DB_NAME", "hospital_db")
 DB_USER = os.getenv("DB_USER", "postgres")
-DB_PASS = os.getenv("DB_PASSWORD", "verdansk2020!")
+DB_PASS = os.getenv("DB_PASS") or ""
 SSL_MODE = os.getenv("DB_SSLMODE", "prefer")
 
 SCHEMA     = os.getenv("DB_SCHEMA", "public")

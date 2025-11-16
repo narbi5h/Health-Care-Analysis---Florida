@@ -1,5 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine, text, bindparam
+from dotenv import load_dotenv
 import os
 import numpy as np
 import re
@@ -7,10 +8,18 @@ import re
 # import full_standardization
 
 #### Database Connection Setup
+load_dotenv()
 
-print("[INFO] Setting up database connection...")
-DB = "postgresql+psycopg2://postgres:verdansk2020!@iamr007.ddns.net:2345/hospital_db"
-engine = create_engine(DB, pool_pre_ping=True)
+DB_USER = os.getenv("DB_USER")
+DB_PASS = os.getenv("DB_PASS")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
+
+DB_URL = f"postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
+engine = create_engine(DB_URL, pool_pre_ping=True)
+print("[INFO] Database engine created.")
 
 ### IDENTIFY CPT CODES FOR QUERIES DRIVEN BY CPT CODES CSV FILE
 curr_path = os.getcwd()
