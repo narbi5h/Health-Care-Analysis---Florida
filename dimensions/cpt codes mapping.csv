@@ -1,32 +1,62 @@
-﻿cpt_code,Description,Specialty
-20610,"Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); without ultrasound guidance",Orthopedic
-20611,"Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); with ultrasound guidance, with permanent recording and reporting",Orthopedic
-27447,"Arthroplasty, knee, condyle and plateau; medial AND lateral compartments with or without patella resurfacing (total knee arthroplasty)",Orthopedic
-27130,"Arthroplasty, acetabular and proximal femoral prosthetic replacement (total hip arthroplasty), with or without autograft or allograft",Orthopedic
-20600,"Arthrocentesis, aspiration and/or injection, small joint or bursa (eg, fingers, toes); without ultrasound guidance",Orthopedic
-20605,"Arthrocentesis, aspiration and/or injection, intermediate joint or bursa (eg, temporomandibular, acromioclavicular, wrist, elbow or ankle, olecranon bursa); without ultrasound guidance",Orthopedic
-29827,"Arthroscopy, shoulder, surgical; with rotator cuff repair",Orthopedic
-29881,"Arthroscopy, knee, surgical; with meniscectomy (medial OR lateral, including any meniscal shaving) including debridement/shaving of articular cartilage (chondroplasty), same or separate compartment(s), when performed",Orthopedic
-26055,"Tendon sheath incision (eg, for trigger finger)",Orthopedic
-29826,"Arthroscopy, shoulder, surgical; decompression of subacromial space with partial acromioplasty, with coracoacromial ligament (ie, arch) release, when performed (List separately in addition to code for primary procedure)",Orthopedic
-97110,"Therapeutic exercises to develop strength, endurance, range of motion, and flexibility. (15 min.)",Physical Medicine & Rehabilitation
-97140,"Manual therapy techniques (e.g., mobilization, manipulation, manual traction) to one or more regions. (15 min.)",Physical Medicine & Rehabilitation
-97112,"Neuromuscular re-education of movement, balance, coordination, kinesthetic sense, posture, and/or proprioception. (15 min.)",Physical Medicine & Rehabilitation
-97530,Therapeutic activities utilizing dynamic activities to improve functional performance. (15 min.),Physical Medicine & Rehabilitation
-97116,Gait training (including stair climbing) to improve walking ability. (15 min.),Physical Medicine & Rehabilitation
-97161,"Physical therapy evaluation, low complexity. (Used for initial assessment)",Physical Medicine & Rehabilitation
-97162,"Physical therapy evaluation, moderate complexity. (Used for initial assessment)",Physical Medicine & Rehabilitation
-97035,Ultrasound therapy (constant attendance modality). (15 min.),Physical Medicine & Rehabilitation
-97535,"Self-care/home management training (e.g., ADLs, safety procedures, assistive technology). (15 min.)",Physical Medicine & Rehabilitation
-97164,Physical therapy re-evaluation of established plan of care.,Physical Medicine & Rehabilitation
-90791,Psychiatric diagnostic evaluation (without medical services). This is for the initial intake session without medication prescribing/management. (Up to 90 minutes typical).,Psychiatry/Psychology
-90792,"Psychiatric diagnostic evaluation with medical services. Used for an initial intake that includes medical services (e.g., medication assessment). (1-2 hours typical).",Psychiatry/Psychology
-90832,"Individual Psychotherapy, 30 minutes. Must be face-to-face time of 16 - 37 minutes. Used for a standalone therapy session.",Psychiatry/Psychology
-90834,"Individual Psychotherapy, 45 minutes. Must be face-to-face time of 38 - 52 minutes. This is the most commonly used individual therapy code.",Psychiatry/Psychology
-90837,"Individual Psychotherapy, 60 minutes. Must be face-to-face time of 53 minutes or more. Used for a longer, standalone therapy session.",Psychiatry/Psychology
-90833,"Individual Psychotherapy, 30 min, performed with E/M service. Must be face-to-face time of 16 - 37 minutes. Add-on code used in conjunction with an E/M (medication management) code.",Psychiatry/Psychology
-90836,"Individual Psychotherapy, 45 min, performed with E/M service. Must be face-to-face time of 38 - 52 minutes. Add-on code used in conjunction with an E/M (medication management) code.",Psychiatry/Psychology
-90838,"Individual Psychotherapy, 60 min, performed with E/M service. Must be face-to-face time of 53 minutes or more. Add-on code used in conjunction with an E/M (medication management) code.",Psychiatry/Psychology
-90839,Psychotherapy for crisis; first 60 minutes. Used for urgent/immediate assessment and stabilization of a patient in acute crisis. Billed for 30 - 74 minutes. Cannot be billed with other psychotherapy codes on the same day.,Psychiatry/Psychology
-90847,"Family psychotherapy (conjoint psychotherapy) with patient present. Used when the identified patient is present in the family session. (50 minutes typical, minimum 26 minutes).",Psychiatry/Psychology
-90853,Group Psychotherapy (other than multiple-family group). (45-60 minutes typical).,Psychiatry/Psychology
+﻿cpt_code,Simple Description,Description,Category,Specialty
+20610,"Joint injection, major, without ultrasound","Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic
+20611,"Joint injection, major, with ultrasound","Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); with ultrasound guidance, with permanent recording and reporting",Injection / Aspiration (Image-Guided),Orthopedic
+27447,Knee replacement,"Arthroplasty, knee, condyle and plateau; medial AND lateral compartments with or without patella resurfacing (total knee arthroplasty)",Arthroplasty (Joint Replacement),Orthopedic
+27130,Hip replacement,"Arthroplasty, acetabular and proximal femoral prosthetic replacement (total hip arthroplasty), with or without autograft or allograft",Arthroplasty (Joint Replacement),Orthopedic
+20600,"Joint injection, minor, without ultrasound","Arthrocentesis, aspiration and/or injection, small joint or bursa (eg, fingers, toes); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic
+20605,"Joint injection, intermediate, without ultrasound","Arthrocentesis, aspiration and/or injection, intermediate joint or bursa (eg, temporomandibular, acromioclavicular, wrist, elbow or ankle, olecranon bursa); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic
+29827,Shoulder repair with rotator cuff repair,"Arthroscopy, shoulder, surgical; with rotator cuff repair",Arthroscopy (Minimally Invasive Surgery),Orthopedic
+29881,Knee repair,"Arthroscopy, knee, surgical; with meniscectomy (medial OR lateral, including any meniscal shaving) including debridement/shaving of articular cartilage (chondroplasty), same or separate compartment(s), when performed",Arthroscopy (Minimally Invasive Surgery),Orthopedic
+26055,Tendon repair,"Tendon sheath incision (eg, for trigger finger)",Incision/Release (Open or Percutaneous Surgery),Orthopedic
+29826,Shoulder repair,"Arthroscopy, shoulder, surgical; decompression of subacromial space with partial acromioplasty, with coracoacromial ligament (ie, arch) release, when performed (List separately in addition to code for primary procedure)",Arthroscopy (Minimally Invasive Surgery),Orthopedic
+97110,"Physical therapy exercises, 15 min.","Therapeutic exercises to develop strength, endurance, range of motion, and flexibility. (15 min.)",Therapeutic Procedure,Physical Medicine & Rehabilitation
+97140,"Manual physical therapy, 15 min.","Manual therapy techniques (e.g., mobilization, manipulation, manual traction) to one or more regions. (15 min.)",Therapeutic Procedure,Physical Medicine & Rehabilitation
+97112,"Neuromuscular re-education, 15 min.","Neuromuscular re-education of movement, balance, coordination, kinesthetic sense, posture, and/or proprioception. (15 min.)",Therapeutic Procedure,Physical Medicine & Rehabilitation
+97530,"Physical therapy, dynamic activities, 15 min.",Therapeutic activities utilizing dynamic activities to improve functional performance. (15 min.),Therapeutic Procedure,Physical Medicine & Rehabilitation
+97116,"Gait training, 15 min.",Gait training (including stair climbing) to improve walking ability. (15 min.),Therapeutic Procedure,Physical Medicine & Rehabilitation
+97161,"Physical therapy initial assessment, low complexity","Physical therapy evaluation, low complexity. (Used for initial assessment)",Evaluation,Physical Medicine & Rehabilitation
+97162,"Physical therapy initial assessment, moderate complexity","Physical therapy evaluation, moderate complexity. (Used for initial assessment)",Evaluation,Physical Medicine & Rehabilitation
+97035,"Ultrasound therapy, 15 min.",Ultrasound therapy (constant attendance modality). (15 min.),Modality,Physical Medicine & Rehabilitation
+97535,"Self-care/home management training, 15 min.","Self-care/home management training (e.g., ADLs, safety procedures, assistive technology). (15 min.)",Therapeutic Procedure,Physical Medicine & Rehabilitation
+97164,Physical therapy re-evaluation of established plan,Physical therapy re-evaluation of established plan of care.,Evaluation,Physical Medicine & Rehabilitation
+90791,"Psychiatric evaluation, without medical",Psychiatric diagnostic evaluation (without medical services). This is for the initial intake session without medication prescribing/management. (Up to 90 minutes typical).,Diagnostic Evaluation,Psychiatry/Psychology
+90792,"Psychiatric evaluation, with medical","Psychiatric diagnostic evaluation with medical services. Used for an initial intake that includes medical services (e.g., medication assessment). (1-2 hours typical).",Diagnostic Evaluation,Psychiatry/Psychology
+90832,"Individual Psychotherapy, 30 min.","Individual Psychotherapy, 30 minutes. Must be face-to-face time of 16 - 37 minutes. Used for a standalone therapy session.",Psychotherapy (Standalone),Psychiatry/Psychology
+90834,"Individual Psychotherapy, 45 min.","Individual Psychotherapy, 45 minutes. Must be face-to-face time of 38 - 52 minutes. This is the most commonly used individual therapy code.",Psychotherapy (Standalone),Psychiatry/Psychology
+90837,"Individual Psychotherapy, 60 min.","Individual Psychotherapy, 60 minutes. Must be face-to-face time of 53 minutes or more. Used for a longer, standalone therapy session.",Psychotherapy (Standalone),Psychiatry/Psychology
+90833,"Individual Psychotherapy, 30 min., with medication management","Individual Psychotherapy, 30 min, performed with E/M service. Must be face-to-face time of 16 - 37 minutes. Add-on code used in conjunction with an E/M (medication management) code.",Psychotherapy w/ E/M,Psychiatry/Psychology
+90836,"Individual Psychotherapy, 45 min., with medication management","Individual Psychotherapy, 45 min, performed with E/M service. Must be face-to-face time of 38 - 52 minutes. Add-on code used in conjunction with an E/M (medication management) code.",Psychotherapy w/ E/M,Psychiatry/Psychology
+90838,"Individual Psychotherapy, 60 min., with medication management","Individual Psychotherapy, 60 min, performed with E/M service. Must be face-to-face time of 53 minutes or more. Add-on code used in conjunction with an E/M (medication management) code.",Psychotherapy w/ E/M,Psychiatry/Psychology
+90839,"Psychotherapy for crisis, 60 min.",Psychotherapy for crisis; first 60 minutes. Used for urgent/immediate assessment and stabilization of a patient in acute crisis. Billed for 30 - 74 minutes. Cannot be billed with other psychotherapy codes on the same day.,Crisis Psychotherapy,Psychiatry/Psychology
+90847,Family psychotherapy,"Family psychotherapy (conjoint psychotherapy) with patient present. Used when the identified patient is present in the family session. (50 minutes typical, minimum 26 minutes).",Family/Group,Psychiatry/Psychology
+90853,Group Psychotherapy,Group Psychotherapy (other than multiple-family group). (45-60 minutes typical).,Family/Group,Psychiatry/Psychology
+92004,"Eye evaluation, new patient","Ophthalmological services: Medical examination and evaluation with initiation of diagnostic and treatment program; comprehensive, new patient.",Eye Exam (General),Ophthalmology
+92014,"Eye evaluation, existing patient","Ophthalmological services: Medical examination and evaluation with initiation or continuation of diagnostic and treatment program; comprehensive, established patient.",Eye Exam (General),Ophthalmology
+92015,Eyesight measurement,Determination of refractive state (refraction),Diagnostic (Add-on),Ophthalmology
+92134,Eye diagnostic scan,"Scanning computerized ophthalmic diagnostic imaging (e.g., Optical Coherence Tomography OCT), posterior segment, with interpretation and report, unilateral or bilateral; retina.",Diagnostic (Imaging),Ophthalmology
+92250,Eye internal photograph,Fundus photography with interpretation and report.,Diagnostic (Imaging),Ophthalmology
+92083,Peripheral vision exam,"Visual field examination, unilateral or bilateral, with medical diagnostic evaluation; extended examination.",Diagnostic (Testing),Ophthalmology
+66984,Cataract surgery,"Extracapsular cataract removal with insertion of intraocular lens prosthesis (IOL), manual or mechanical technique (e.g., phacoemulsification).",Surgical (Cataract),Ophthalmology
+67028,Eye injection,"Intravitreal injection of a therapeutic agent (e.g., anti-VEGF medication).",Procedure (Injection),Ophthalmology
+65855,Eye drainage to lower eye pressure,"Trabeculoplasty by laser surgery, one or more sessions, one or both eyes (e.g., for Glaucoma).",Procedure (Laser),Ophthalmology
+68761,Eye plug for severe dry eyes,"Closure of the lacrimal punctum; by plug, each.",Procedure (Minor),Ophthalmology
+11102,Mole or growth removal,"Tangential biopsy of skin (e.g., shave, scoop, saucer technique); single lesion.",Surgery (Integumentary System),Dermatology
+11104,"Punch biopsy, single lesion",Punch biopsy of skin (including simple closure); single lesion.,Surgery (Integumentary System),Dermatology
+17000,"Destruction of pre-cancerous spot, 1st lesion","Destruction of premalignant lesions (e.g., actinic keratoses) first lesion.",Surgery (Integumentary System),Dermatology
+17003,"Destruction of pre-cancerous spot, 2nd through 14th lesion",Destruction of premalignant lesions; 2nd through 14th lesions (List separately in addition to code for first lesion).,Surgery (Integumentary System),Dermatology
+17110,"Destruction of non-cancerous spot, up to 14 lesions",Destruction of benign lesions other than skin tags or cutaneous vascular proliferative lesions; up to 14 lesions.,Surgery (Integumentary System),Dermatology
+11900,"Skin injection, up to 7 lesions","Injection, intralesional; up to and including 7 lesions.",Surgery (Integumentary System),Dermatology
+14040,Skin flap repair,"Adjacent tissue transfer or rearrangement, forehead, cheeks, chin, mouth, neck, axillae, genitalia, hands, feet; defect up to 10 sq cm.",Surgery (Integumentary System),Dermatology
+10040,Acne surgery,"Acne surgery (e.g., marsupialization, opening, or removal of multiple milia, comedones, cysts); manual expression of lesions.",Surgery (Integumentary System),Dermatology
+15781,"Face dermabrasion, partial",Dermabrasion; partial face.,Medicine (Special Services/Procedures),Dermatology
+96900,Ultraviolet light therapy for face,"Actinotherapy (ultraviolet light B) for the treatment of skin disease (e.g., psoriasis, vitiligo).",Surgery (Integumentary System),Dermatology
+77295,3D computer map of tumor,"3-dimensional radiotherapy plan, including dose-volume histogram.",Therapeutic Radiology (Planning),Radiation Oncology
+77301,Radiation therapy complex planning,"Intensity Modulated Radiation Therapy (IMRT) plan, including dose-volume histograms.",Therapeutic Radiology (Planning),Radiation Oncology
+77290,"CT or MRI to mark and measure tumor, complex",Therapeutic radiology simulation-aided field setting; complex.,Therapeutic Radiology (Preparation),Radiation Oncology
+77386,"Radiation treatment, complex","Intensity Modulated Radiation Treatment (IMRT) delivery, includes guidance and tracking; complex.",Therapeutic Radiology (Delivery),Radiation Oncology
+77427,"Radiation treatment management, 5 treatments","Radiation treatment management, per five fractions of treatment.",Therapeutic Radiology (Management),Radiation Oncology
+77435,"Stereotactic body radiation therapy, treatment managment","Stereotactic Body Radiation Therapy (SBRT), treatment management, per treatment course.",Therapeutic Radiology (Management),Radiation Oncology
+77373,"Stereotactic body radiation therapy, treatment delivery","Stereotactic body radiation therapy, treatment delivery, per fraction.",Therapeutic Radiology (Delivery),Radiation Oncology
+77778,Brachytherapy (internal) radiation therapy,"Interstitial radiation source application, complex, includes supervision, handling, loading of radiation source.",Brachytherapy (Internal Radiation),Radiation Oncology
+77334,Design and build of custom molds to protect cancer patient,"Treatment devices, design and construction; complex (e.g., irregular blocks, compensators, wedges).",Therapeutic Radiology (Dosimetry/Physics),Radiation Oncology
+77014,CT imaging to guide placement of radiation,Computed tomography guidance for placement of radiation therapy fields.,Radiology (Diagnostic),Radiation Oncology
