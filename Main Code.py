@@ -61,7 +61,9 @@ select b.hospital_name, b.hospital_address,
 		   hcc.description, hcc.code, hcc.setting, hcc.modifiers, hcc.standard_charge_gross, hcc.standard_charge_discounted_cash, hcc.payer_name, hcc.plan_name, 
 		   hcc.standard_charge_negotiated_dollar, standard_charge_negotiated_percentage, hcc.estimated_amount, hcc.standard_charge_min, hcc.standard_charge_max,
            COALESCE(ps.bucket, ys.bucket) as bucket,
-           COALESCE(ps.specification, ys.specification) as specification		   
+           COALESCE(ps.specification, ys.specification) as specification_plan,
+           ys.specification as specification_payer
+           		   
 from hospital_cpt_charges hcc
 join hospital_metadata b
     ON hcc.source_file = b.source_file
@@ -255,11 +257,18 @@ cols_front = ['hospital_name', 'hospital_address_single', 'ZIP', 'ZIP4', 'num_lo
 other_cols = [c for c in exploded.columns if c not in cols_front]
 exploded = exploded[cols_front + other_cols]
 
+### Update inconsistent Bucket and Specification
+exploded['specification'] = np.where(
+    exploded['bucket'].eq('Government'),
+    exploded['specification_plan'],
+    exploded['specification_payer']
+)
+
 cols_keep = [
     'hospital_name', 'hospital_address_single', 'ZIP4', 'setting', 'modifiers', 'standard_charge_gross',
     'standard_charge_discounted_cash', 'payer_name', 'plan_name',
     'standard_charge_negotiated_dollar', 'standard_charge_negotiated_percentage', 
-    'standard_charge_min', 'standard_charge_max', 'bucket', 'specification', 'cpt_code', 'Description',
+    'standard_charge_min', 'standard_charge_max', 'bucket', 'specification','specification_plan', 'cpt_code', 'Description',
     'Specialty', 'Rate_using_min', 'Rate_using_max'
 ]
 
@@ -268,9 +277,9 @@ missing = [c for c in cols_keep if c not in exploded.columns]
 exploded = exploded[cols_keep].copy()
 
 
-# write rows to CSV
-exploded.to_csv(f"{curr_path}/exploded_cpt_data.csv", index=False)
-print("[OK] Wrote exploded CPT data to 'exploded_cpt_data.csv'")
+# # write rows to CSV
+# exploded.to_csv(f"{curr_path}/exploded_cpt_data.csv", index=False)
+# print("[OK] Wrote exploded CPT data to 'exploded_cpt_data.csv'")
 
 # Create a new table in the database to store the exploded CPT data
 exploded.to_sql('standardized_cpt_columns', engine, if_exists='replace', index=True)
