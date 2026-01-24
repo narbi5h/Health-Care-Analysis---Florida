@@ -1,14 +1,14 @@
 ﻿cpt_code,Simple Description,Description,Category,Specialty
-20610,"Joint injection, major, without ultrasound","Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic
-20611,"Joint injection, major, with ultrasound","Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); with ultrasound guidance, with permanent recording and reporting",Injection / Aspiration (Image-Guided),Orthopedic
-27447,Knee replacement,"Arthroplasty, knee, condyle and plateau; medial AND lateral compartments with or without patella resurfacing (total knee arthroplasty)",Arthroplasty (Joint Replacement),Orthopedic
-27130,Hip replacement,"Arthroplasty, acetabular and proximal femoral prosthetic replacement (total hip arthroplasty), with or without autograft or allograft",Arthroplasty (Joint Replacement),Orthopedic
-20600,"Joint injection, minor, without ultrasound","Arthrocentesis, aspiration and/or injection, small joint or bursa (eg, fingers, toes); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic
-20605,"Joint injection, intermediate, without ultrasound","Arthrocentesis, aspiration and/or injection, intermediate joint or bursa (eg, temporomandibular, acromioclavicular, wrist, elbow or ankle, olecranon bursa); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic
-29827,Shoulder repair with rotator cuff repair,"Arthroscopy, shoulder, surgical; with rotator cuff repair",Arthroscopy (Minimally Invasive Surgery),Orthopedic
-29881,Knee repair,"Arthroscopy, knee, surgical; with meniscectomy (medial OR lateral, including any meniscal shaving) including debridement/shaving of articular cartilage (chondroplasty), same or separate compartment(s), when performed",Arthroscopy (Minimally Invasive Surgery),Orthopedic
-26055,Tendon repair,"Tendon sheath incision (eg, for trigger finger)",Incision/Release (Open or Percutaneous Surgery),Orthopedic
-29826,Shoulder repair,"Arthroscopy, shoulder, surgical; decompression of subacromial space with partial acromioplasty, with coracoacromial ligament (ie, arch) release, when performed (List separately in addition to code for primary procedure)",Arthroscopy (Minimally Invasive Surgery),Orthopedic
+20610,"Joint injection, major, without ultrasound","Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic Surgery
+20611,"Joint injection, major, with ultrasound","Arthrocentesis, aspiration and/or injection, major joint or bursa (eg, shoulder, hip, knee, subacromial bursa); with ultrasound guidance, with permanent recording and reporting",Injection / Aspiration (Image-Guided),Orthopedic Surgery
+27447,Knee replacement,"Arthroplasty, knee, condyle and plateau; medial AND lateral compartments with or without patella resurfacing (total knee arthroplasty)",Arthroplasty (Joint Replacement),Orthopedic Surgery
+27130,Hip replacement,"Arthroplasty, acetabular and proximal femoral prosthetic replacement (total hip arthroplasty), with or without autograft or allograft",Arthroplasty (Joint Replacement),Orthopedic Surgery
+20600,"Joint injection, minor, without ultrasound","Arthrocentesis, aspiration and/or injection, small joint or bursa (eg, fingers, toes); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic Surgery
+20605,"Joint injection, intermediate, without ultrasound","Arthrocentesis, aspiration and/or injection, intermediate joint or bursa (eg, temporomandibular, acromioclavicular, wrist, elbow or ankle, olecranon bursa); without ultrasound guidance",Injection / Aspiration (Therapeutic/Diagnostic),Orthopedic Surgery
+29827,Shoulder repair with rotator cuff repair,"Arthroscopy, shoulder, surgical; with rotator cuff repair",Arthroscopy (Minimally Invasive Surgery),Orthopedic Surgery
+29881,Knee repair,"Arthroscopy, knee, surgical; with meniscectomy (medial OR lateral, including any meniscal shaving) including debridement/shaving of articular cartilage (chondroplasty), same or separate compartment(s), when performed",Arthroscopy (Minimally Invasive Surgery),Orthopedic Surgery
+26055,Tendon repair,"Tendon sheath incision (eg, for trigger finger)",Incision/Release (Open or Percutaneous Surgery),Orthopedic Surgery
+29826,Shoulder repair,"Arthroscopy, shoulder, surgical; decompression of subacromial space with partial acromioplasty, with coracoacromial ligament (ie, arch) release, when performed (List separately in addition to code for primary procedure)",Arthroscopy (Minimally Invasive Surgery),Orthopedic Surgery
 97110,"Physical therapy exercises, 15 min.","Therapeutic exercises to develop strength, endurance, range of motion, and flexibility. (15 min.)",Therapeutic Procedure,Physical Medicine & Rehabilitation
 97140,"Manual physical therapy, 15 min.","Manual therapy techniques (e.g., mobilization, manipulation, manual traction) to one or more regions. (15 min.)",Therapeutic Procedure,Physical Medicine & Rehabilitation
 97112,"Neuromuscular re-education, 15 min.","Neuromuscular re-education of movement, balance, coordination, kinesthetic sense, posture, and/or proprioception. (15 min.)",Therapeutic Procedure,Physical Medicine & Rehabilitation
@@ -60,3 +60,63 @@
 77778,Brachytherapy (internal) radiation therapy,"Interstitial radiation source application, complex, includes supervision, handling, loading of radiation source.",Brachytherapy (Internal Radiation),Radiation Oncology
 77334,Design and build of custom molds to protect cancer patient,"Treatment devices, design and construction; complex (e.g., irregular blocks, compensators, wedges).",Therapeutic Radiology (Dosimetry/Physics),Radiation Oncology
 77014,CT imaging to guide placement of radiation,Computed tomography guidance for placement of radiation therapy fields.,Radiology (Diagnostic),Radiation Oncology
+52601,Prostate removal,"Transurethral resection of the prostate (TURP), complete.",Surgery (Urinary System),Urology
+52356,Kidney stone treatment with scope,"Cystourethroscopy, with ureteroscopy and/or pyeloscopy; with lithotripsy including insertion of indwelling ureteral stent.",Surgery (Urinary System),Urology
+50590,"Kidney stone treatment, external with sound waves","Lithotripsy, extracorporeal shock wave (ESWL).",Surgery (Urinary System),Urology
+55700,Prostate biopsy,"Biopsy of prostate, needle, by any approach.",Surgery (Male Genital System),Urology
+52204,Bladder biopsy,"Cystourethroscopy, with biopsy.",Surgery (Urinary System),Urology
+52332,Temporary tube placement with scope,"Cystourethroscopy, with insertion of indwelling ureteral stent (e.g., double-J type).",Surgery (Urinary System),Urology
+55250,Vasectomy,"Vasectomy, unilateral or bilateral, including postoperative semen examination(s).",Surgery (Male Genital System),Urology
+51741,"Bladder diagnostic test, complex","Complex uroflowmetry (e.g., instrumented or electronically recorded).",Medicine (Urodynamics),Urology
+50548,"Kidney removal, minimally invasive","Laparoscopy, surgical, nephrectomy, complete.",Surgery (Urinary System),Urology
+53445,Artificial urethra insertion,Insertion of artificial urethral sphincter.,Surgery (Urinary System),Urology
+92928,Stent placement for blocked artery,"Percutaneous coronary intervention (PCI) with stent placement and angioplasty, single major coronary artery or branch.",Therapeutic Cardiovascular,Cardiology
+93656,Comprehensive evaluation and treatment of AFib,Comprehensive EP evaluation and catheter ablation of atrial fibrillation (AFib) by pulmonary vein isolation (PVI).,Intracardiac Electrophysiology,Cardiology
+33249,Surgical placement of cardioverter-defibrillator (ICD),"Insertion or replacement of a permanent cardioverter-defibrillator (ICD) system, dual or multiple leads.",Surgery (Cardiac Pacemaker/ICD),Cardiology
+93458,Left heart catheterization to image coronary arteries,"Left heart catheterization with coronary angiography, including image supervision, interpretation and report.",Cardiac Catheterization,Cardiology
+93306,"Complete, non-invasive ultrasound of the heart","Echocardiography, transthoracic (TTE), complete, with spectral and color flow Doppler.",Echocardiography,Cardiology
+93015,Cardiovascular stress test with report,"Cardiovascular stress test including supervision, tracing, interpretation, and report.",Cardiography,Cardiology
+93296,Evaluation of an implanted pacemaker or defibrillator,"Interrogation device evaluation (in person or remote) of a permanent transvenous pacemaker or ICD, system with multiple leads.",Cardiovascular Monitoring,Cardiology
+93571,Measurement of coronary Fractional Flow Reserve (FFR),"Intravascular Doppler velocity and/or pressure derived Fractional Flow Reserve (FFR), coronary.",Cardiac Catheterization (Add-on),Cardiology
+93580,"Repair of congenital heart defect, minimally invasive","Percutaneous transcatheter closure of congenital interatrial communication (e.g., ASD, PFO) with implant.",Cardiac Catheterization,Cardiology
+93653,Surgical management of supraventricular tachycardia (SVT),Comprehensive EP evaluation and catheter ablation of supraventricular tachycardia (SVT).,Intracardiac Electrophysiology,Cardiology
+63030,"Spinal cord surgery for pinched nerves, minimally invasive","Laminotomy (decompression procedure), with or without facetectomy, foraminotomy, or excision of herniated intervertebral disc; one interspace, cervical, thoracic, or lumbar.",Surgery (Spine/Cord),Neurosurgery
+22630,Lumbar spinal fusion,"Arthrodesis, posterior or posterolateral technique, single interspace, lumbar, with or without decompression and with or without current instrumentation.",Surgery (Spine/Cord),Neurosurgery
+61510,Major open brain surgery for tumor,"Craniectomy for excision of brain tumor, supratentorial (above the cerebellum); except meningioma, acoustic neuroma.",Surgery (Skull/Brain),Neurosurgery
+61796,"Radiation for brain tumor, non-invasive, single session","Stereotactic radiosurgery (SRS), single target lesion in the brain, spinal cord, or body (List separately in addition to code for primary procedure).",Surgery (Stereotaxis),Neurosurgery
+63650,Spinal cord electrode placement for chronic pain,"Percutaneous implantation of neurostimulator electrode array (e.g., paddle or cylinder), epidural.",Surgery (Neurostimulator),Neurosurgery
+62000,Emergency skull surgery for head trauma,"Elevation of depressed skull fracture, simple, without dural laceration.",Surgery (Skull/Brain),Neurosurgery
+61150,Small drill hole in skull for tissue sample,"Burr hole(s) or trephine, with biopsy of brain or intracerebral abscess.",Surgery (Skull/Brain),Neurosurgery
+69990,Microsurgical techniques used in surgery for nervous system,Microsurgical techniques used in surgery for nervous system (except instrumentation/laminotomy codes) (List separately in addition to code for primary procedure).,Surgery (Nervous System),Neurosurgery
+63280,Surgery to remove tumor or lesion inside spinal canal,Laminectomy with excision of intraspinal lesion other than herniated disc; intradural (within the dura).,Surgery (Spine/Cord),Neurosurgery
+64721,Carpal tunnel release surgery,"Neuroplasty (decompression) of median nerve at carpal tunnel (e.g., open procedure).",Surgery (Peripheral Nerve),Neurosurgery
+49500,Infant hernia surgical repair,"Repair initial inguinal hernia, premature or infant younger than 6 months old at time of surgery.",Surgery (Hernia),Pediatric Surgery
+44970,"Appendix removal, minimally invasive","Laparoscopy, surgical, appendectomy (removal of the appendix).",Surgery (Appendix),Pediatric Surgery
+43305,Surgical repair of esophagus birth defect,Repair of congenital atresia of esophagus with or without fistula; without external fistula.,Surgery (Esophagus),Pediatric Surgery
+39503,Surgical repair of diaphragm birth defect,"Repair, congenital diaphragmatic hernia (CDH) with or without fundoplasty, transthoracic or transabdominal approach.",Surgery (Diaphragm),Pediatric Surgery
+54640,"Surgical management of undescended testes, inguinal","Orchiopexy, inguinal approach, with or without hernia repair.",Surgery (Male Genital),Pediatric Surgery
+43520,Surgical managment of stomach birth defect,"Pyloromyotomy, cutting the muscle of the pylorus (e.g., for congenital hypertrophic pyloric stenosis).",Surgery (Stomach),Pediatric Surgery
+49605,Surgical repair of abdominal birth defect,Repair of gastroschisis (closure of abdominal wall defect) with or without prosthesis.,Surgery (Hernia/Abdomen),Pediatric Surgery
+47400,"Surgery for biliary atresia, liver disease in newborns","Hepaticojejunostomy (e.g., Kasai procedure for biliary atresia).",Surgery (Biliary Tract),Pediatric Surgery
+21743,"Surgery for sunken chest deformity, minimally invasive","Repair of pectus excavatum by minimally invasive technique (e.g., Nuss procedure), including thoracoscopy assistance.",Surgery (Musculoskeletal),Pediatric Surgery
+46742,"Surgical repair of imperforate anus, severe birth defect",Repair of high imperforate anus with rectovaginal/urethral fistula; with colostomy.,Surgery (Anus/Rectum),Pediatric Surgery
+99285,"ER visit, highest complexity","Emergency department visit, highest complexity medical decision making.",Evaluation and Management (E/M),Emergency Medicine
+99284,"ER visit, high complexity","Emergency department visit, high complexity medical decision making.",Evaluation and Management (E/M),Emergency Medicine
+99283,"ER visit, moderate complexity","Emergency department visit, moderate complexity medical decision making.",Evaluation and Management (E/M),Emergency Medicine
+99282,"ER visit, low complexity","Emergency department visit, low complexity medical decision making.",Evaluation and Management (E/M),Emergency Medicine
+99291,"Critical care services, first 30-74 minutes","Critical care services, first 30-74 minutes.",Evaluation and Management (E/M),Emergency Medicine
+36556,Insertion of catheter into central vein for rapid fluid/medication,Insertion of non-tunneled centrally inserted central venous catheter.,Surgery (Cardiovascular),Emergency Medicine
+31500,Emergency placement of breathing tube,"Intubation, endotracheal, emergency procedure.",Surgery (Respiratory),Emergency Medicine
+32551,Placement of chest tube,"Tube thoracostomy (e.g., chest tube insertion) including uncomplicated follow-up care.",Surgery (Respiratory),Emergency Medicine
+93308,Bedside ultrasound of the heart,"Echocardiography, transthoracic (TTE), limited or follow-up study.",Medicine (Cardiovascular),Emergency Medicine
+12002,"Simple repair of single laceration, moderate-sized","Simple repair of superficial wounds on the scalp, neck, axillae, external genitalia, trunk, and/or extremities between 2.6 cm and 7.5 cm.",Surgery (Integumentary),Emergency Medicine
+99396,Comprehensive preventive visit; established patient age 40-64,"Periodic comprehensive preventive medicine reevaluation and management, established patient; age 40-64 years.",Preventive Medicine E/M,Preventive Medicine
+99386,Comprehensive preventive visit; new patient age 40-64,"Initial comprehensive preventive medicine evaluation and management, new patient; age 40-64 years.",Preventive Medicine E/M,Preventive Medicine
+99401,"Preventive medicine, individual counseling, 15 min.","Preventive medicine, individual counseling on risk factor reduction and behavior change intervention; up to 15 minutes.",Counseling,Preventive Medicine
+99404,"Preventive medicine, individual counseling, 45-60 min.","Preventive medicine, individual counseling on risk factor reduction and behavior change intervention; 45-60 minutes.",Counseling,Preventive Medicine
+99407,Smoking and tobacco use cessation counseling,"Smoking and tobacco use cessation counseling visit; intensive, greater than 10 minutes.",Counseling,Preventive Medicine
+99420,Health risk assessment and scoring,Health risk assessment instrument administration and scoring.,Counseling,Preventive Medicine
+99497,Advance care planning including advance directives,"Advance care planning including the explanation and discussion of advance directives, first 30 minutes.",Planning,Preventive Medicine
+99490,Chronic Care Management (CCM) services,"Chronic Care Management (CCM) services, at least 20 minutes of clinical staff time directed by a physician.",Care Management,Preventive Medicine
+90471,"Immunization administration, one vaccine",Immunization administration (includes counseling); one vaccine.,Immunization,Preventive Medicine
+96127,Brief emotional/behavioral assessment,Brief emotional/behavioral assessment administered via standardized instruments.,Medicine (Psychiatric),Preventive Medicine

@@ -10,9 +10,9 @@ import argparse
 
 
 # ---------- SETTINGS ----------
-INPUT_FOLDER = Path(r"C:\Users\gio12\Desktop\New folder\meta_data_rows_removed")                       # folder with raw wide CSVs
-OUTPUT_FOLDER = Path(r"C:\Users\gio12\Desktop\New folder\column_standardized")   # cleaned outputs live here
-FAILED_FOLDER = Path(r"C:\Users\gio12\Desktop\New folder\column_standardized_failed")      # raw files that failed processing
+INPUT_FOLDER =  Path(__file__).parent / "meta_data_rows_removed"                       # folder with raw wide CSVs
+OUTPUT_FOLDER = Path(__file__).parent / "column_standardized"   # cleaned outputs live here
+FAILED_FOLDER = Path(__file__).parent / "column_standardized_failed"      # raw files that failed processing
 
 OUTPUT_FOLDER.mkdir(exist_ok=True)
 FAILED_FOLDER.mkdir(exist_ok=True)
